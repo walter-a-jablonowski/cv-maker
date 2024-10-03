@@ -15,7 +15,7 @@
       
       <img src="users/<?= $user ?>/img.png" alt="<?= $data['personal']['name'] ?>" class="profile-img">
       
-      <h1 style="font-size: 2.5vw;"><?= $data['personal']['name'] ?></h1>  <!-- fix font size so that it matches container -->
+      <h1 style="font-size: 2.4vw;"><?= $data['personal']['name'] ?></h1>  <!-- fix font size so that it matches container -->
       
       <?php if( ! empty( $data['personal']['summary'] )): ?>
         <p><?= $data['personal']['summary'] ?></p>
