@@ -197,6 +197,12 @@ h1, h2 {
     color: var(--secondary-color) !important;
   }
 
+  .new-page {
+    page-break-inside: avoid;
+    page-break-before: always;
+    margin-top: 20px;
+  }
+
   body {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;

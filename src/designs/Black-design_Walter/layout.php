@@ -41,8 +41,6 @@
         </table>
       </div>
 
-      <!-- <h2>Dev skills</h2> -->
-      
       <?php foreach( $data['skills']['dev'] as $skill => $level): ?>
         <div class="skill" style="margin-top: 20px;">
           <div class="skill-name"><?= $skill ?></div>
@@ -52,15 +50,13 @@
         </div>
       <?php endforeach; ?>
 
-      <!-- <h2>Language skills</h2> -->
-      
       <div class="lang-skills" style="margin-top: 40px;">
         <?php foreach( $data['skills']['lang'] as $language => $proficiency): ?>
           <span class="lang-skill"><?= $language ?>: <?= $proficiency ?></span>
         <?php endforeach; ?>
       </div>
         
-      <div style="padding-top: 40px;">
+      <div class="new-page" style="padding-top: 20px;">
         <table class="misc-personal">
           <tr>
             <td>Born:</td>
@@ -101,7 +97,7 @@
         <p><?= $data['goals'] ?></p>
       </section>
 
-      <section>
+      <section class="new-page">
   
         <h2>Experience</h2>
   
