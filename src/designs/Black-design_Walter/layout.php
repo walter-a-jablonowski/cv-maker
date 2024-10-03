@@ -114,7 +114,7 @@
                 <?= $job['position'] ?>
               </h3>
               <?php if( ! empty( $job['organisation']) || ! empty( $job['summary'])): ?>
-                <p>
+                <p class="details">
                   <?php if( ! empty( $job['organisation'] )): ?>
                     <span class="label">Company:</span> <?= $job['organisation'] ?>
                   <?php endif; ?>
@@ -144,7 +144,7 @@
                 <?= $edu['institution'] ?>
               </h3>
               <?php if( ! empty( $edu['summary']) || ! empty( $edu['degree'])): ?>
-                <p>
+                <p class="details">
                   <?php if( ! empty( $edu['summary'] )): ?>
                     <?= $edu['summary'] ?>
                   <?php endif; ?>
