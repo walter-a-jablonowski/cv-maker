@@ -1,0 +1,83 @@
+personal:
+
+  name:          Jane B. Smith
+  logo:          logo_2.png
+  summary:       Full Stack Developer
+  email:         jane.smith@email.com
+  url:           http://www.janesmith.dev
+  location:
+    address:     123 Tech Lane
+    postalCode:  90210
+    city:        Silicon Valley
+  dateOfBirth:   "1990-05-15"
+  nationality:   American
+  maritalStatus: married
+
+summary: >
+
+  10 years of experience in full stack development with a focus on JavaScript-based applications.
+  Proficient in modern frameworks like React and Node.js, with a passion for creating scalable and efficient web solutions.
+  Strong background in cloud technologies and DevOps practices.
+
+specialSkills: >
+
+  Enthusiastic about implementing microservices architecture and serverless computing.
+  Experienced in optimizing application performance and implementing robust security measures.
+  Skilled in mentoring junior developers and leading agile development teams.
+
+goals: |
+
+  <ul class="no-indent">
+    <li>Contribute to open-source projects</li>
+    <li>Explore machine learning integration in web applications</li>
+    <li>Develop innovative solutions for environmental sustainability</li>
+    <li>Lead a diverse and inclusive development team</li>
+    <li>Transition into a technical architect role</li>
+    <li>Maintain work-life balance with flexible hours</li>
+  </ul>
+
+skills:
+  dev:
+    JavaScript:  100
+    React:       90
+    Node.js:     85
+    Python:      70
+    AWS:         80
+    Docker:      75
+    MongoDB:     85
+    GraphQL:     70
+  lang:
+    English:  Native
+    Spanish:  Conversational
+
+experience:
+
+  - from:         06/2018
+    until:        Present
+    position:     Senior Full Stack Developer
+    organisation: TechInnovate Inc., San Francisco
+    summary:      Leading development of scalable web applications
+
+  - from:         03/2015
+    until:        05/2018
+    position:     Frontend Developer
+    organisation: WebSolutions Co., New York
+    summary:      Developed responsive user interfaces for enterprise clients
+
+  - from:         07/2012
+    until:        02/2015
+    position:     Junior Web Developer
+    organisation: StartUp Dynamics, Austin
+    summary:      Assisted in building MVPs for various startup projects
+
+education:
+
+  - from:        09/2008
+    until:       05/2012
+    institution: Tech University of America
+    degree:      Bachelor of Science in Computer Science
+
+  - from:        09/2004
+    until:       06/2008
+    institution: Innovative High School
+    degree:      High School Diploma

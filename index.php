@@ -6,8 +6,9 @@ use Symfony\Component\Yaml\Exception\ParseException;
 require 'vendor/autoload.php';
 
 
-$user   = 'Walter';
-$design = $_GET['design'] ?? 'Black-design_Walter';
+// $user = 'Walter';
+$user    = 'Demo';
+$design  = $_GET['design'] ?? 'Black-design_Walter';
 
 $data = Yaml::parseFile("users/$user/cv.yml");
 
