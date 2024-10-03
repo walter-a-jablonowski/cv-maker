@@ -1,5 +1,11 @@
 
-- [ ] Add interactive elems for the web version like collapse
+- [ ] Make sidebar fully black h 100 in print layout
+  ```
+  How can I make sure that in the print layout, when a webpage while printed needs 2 A4 sizes pages, a left black sidebar fills all pages until the bottom.
+  ```
+- [ ] Add stunning interactive elems for the web version like collapse
+- [ ] German version via AI (make yml and add placeholders)
+    - [ ] Lang switch
 - [ ] Print button upper right
   - style for telling the browser to use no page border and portrait?
 - [ ] Some hori line thing besode Logo or grdient
