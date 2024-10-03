@@ -24,7 +24,7 @@
       <div class="contact-info">
         <table style="margin-left: -4px;">
           <tr>
-            <td style="padding-right: 8px;"><i class="bi bi-envelope"></i></td>
+            <td><i class="bi bi-envelope"></i></td>
             <td><?= $data['personal']['email'] ?></td>
           </tr>
           <tr>
@@ -54,26 +54,28 @@
 
       <!-- <h2>Language skills</h2> -->
       
-      <div style="margin-top: 40px;">
+      <div class="lang-skills" style="margin-top: 40px;">
         <?php foreach( $data['skills']['lang'] as $language => $proficiency): ?>
-          <span class="language-skill"><?= $language ?>: <?= $proficiency ?></span>
+          <span class="lang-skill"><?= $language ?>: <?= $proficiency ?></span>
         <?php endforeach; ?>
       </div>
         
-      <table style="margin-top: 20px;">
-        <tr>
-          <td style="padding-right: 20px;">Date of birth:</td>
-          <td><?= $data['personal']['dateOfBirth'] ?></td>
-        </tr>
-        <tr>
-          <td>Nationality:</td>
-          <td><?= $data['personal']['nationality'] ?></td>
-        </tr>
-        <tr>
-          <td>Marital status:</td>
-          <td><?= $data['personal']['maritalStatus'] ?></td>
-        </tr>
-      </table>
+      <div style="padding-top: 40px;">
+        <table class="misc-personal">
+          <tr>
+            <td>Born:</td>
+            <td><?= $data['personal']['dateOfBirth'] ?></td>
+          </tr>
+          <tr>
+            <td>Nationality:</td>
+            <td><?= $data['personal']['nationality'] ?></td>
+          </tr>
+          <tr>
+            <td>Marital status:</td>
+            <td><?= $data['personal']['maritalStatus'] ?></td>
+          </tr>
+        </table>
+      </div>
     </div>
 
     <div class="main-content">
