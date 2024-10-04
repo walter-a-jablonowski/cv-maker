@@ -1,7 +1,7 @@
 <div class="container">
   <div class="sidebar">
     
-    <img src="users/<?= $user ?>/img.png" alt="<?= $data['personal']['name'] ?>" class="profile-img">
+    <img src="<?= $img ?>" alt="<?= $data['personal']['name'] ?>" class="profile-img">
     
     <h1 style="font-size: 2.4vw;"><?= $data['personal']['name'] ?></h1>  <!-- fix font size so that it matches container -->
     
