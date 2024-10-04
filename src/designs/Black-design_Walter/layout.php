@@ -59,15 +59,15 @@
       <div class="new-page" style="padding-top: 20px;">
         <table class="misc-personal">
           <tr>
-            <td>Born:</td>
+            <td><?= $captions['born'] ?>:</td>
             <td><?= $data['personal']['dateOfBirth'] ?></td>
           </tr>
           <tr>
-            <td>Nationality:</td>
+            <td><?= $captions['nationality'] ?>:</td>
             <td><?= $data['personal']['nationality'] ?></td>
           </tr>
           <tr>
-            <td>Marital status:</td>
+            <td><?= $captions['maritalStatus'] ?>:</td>
             <td><?= $data['personal']['maritalStatus'] ?></td>
           </tr>
         </table>
@@ -83,24 +83,24 @@
       <?php endif; ?>
       
       <section>
-        <h2>Summary</h2>
+        <h2><?= $captions['summary'] ?></h2>
         <p><?= $data['summary'] ?></p>
       </section>
-
+      
       <section>
-        <h2>Special skills</h2>
+        <h2><?= $captions['specialSkills'] ?></h2>
         <p><?= $data['specialSkills'] ?></p>
       </section>
-
+      
       <section>
-        <h2>Goals</h2>
+        <h2><?= $captions['goals'] ?></h2>
         <p><?= $data['goals'] ?></p>
       </section>
-
+      
       <section class="new-page">
-  
-        <h2>Experience</h2>
-  
+        
+        <h2><?= $captions['experience'] ?></h2>
+        
         <div class="timeline">
           <?php foreach( $data['experience'] as $job): ?>
             <div class="experience-item">
@@ -123,13 +123,13 @@
                 </p>
               <?php endif; ?>
             </div>
-          <?php endforeach; ?>
-        </div>
+            <?php endforeach; ?>
+          </div>
       </section>
         
       <section>
           
-        <h2>Education</h2>
+        <h2><?= $captions['education'] ?></h2>
         
         <div class="timeline">
           <?php foreach( $data['education'] as $edu): ?>

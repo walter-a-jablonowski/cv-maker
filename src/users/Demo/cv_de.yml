@@ -1,0 +1,83 @@
+personal:
+
+  name:          Jane B. Smith
+  logo:          logo_2.png
+  summary:       Full Stack Developer
+  email:         jane.smith@email.com
+  url:           http://www.janesmith.dev
+  location:
+    address:     123 Tech Lane
+    postalCode:  90210
+    city:        Silicon Valley
+  dateOfBirth:   "15.05.1990"
+  nationality:   Amerikanisch
+  maritalStatus: verheiratet
+
+summary: >
+
+  10 Jahre Erfahrung in der Full-Stack-Entwicklung mit Schwerpunkt auf JavaScript-basierten Anwendungen.
+  Versiert in modernen Frameworks wie React und Node.js, mit Leidenschaft für die Erstellung skalierbarer und effizienter Weblösungen.
+  Fundierter Hintergrund in Cloud-Technologien und DevOps-Praktiken.
+
+specialSkills: >
+
+  Begeistert von der Implementierung von Microservices-Architektur und serverlosem Computing.
+  Erfahren in der Optimierung der Anwendungsleistung und der Implementierung robuster Sicherheitsmaßnahmen.
+  Kompetent in der Betreuung von Juniorentwicklern und der Leitung agiler Entwicklungsteams.
+
+goals: |
+
+  <ul class="no-indent">
+    <li>Beitrag zu Open-Source-Projekten</li>
+    <li>Erforschung der Integration von maschinellem Lernen in Webanwendungen</li>
+    <li>Entwicklung innovativer Lösungen für ökologische Nachhaltigkeit</li>
+    <li>Leitung eines vielfältigen und inklusiven Entwicklungsteams</li>
+    <li>Übergang in eine Position als technische Architektin</li>
+    <li>Aufrechterhaltung der Work-Life-Balance durch flexible Arbeitszeiten</li>
+  </ul>
+
+skills:
+  dev:
+    JavaScript:  100
+    React:       90
+    Node.js:     85
+    Python:      70
+    AWS:         80
+    Docker:      75
+    MongoDB:     85
+    GraphQL:     70
+  lang:
+    English:  Muttersprache
+    Spanish:  Konversationsniveau
+
+experience:
+
+  - from:         06/2018
+    until:        Heute
+    position:     Senior Full-Stack-Entwicklerin
+    organisation: TechInnovate Inc., San Francisco
+    summary:      Leitung der Entwicklung skalierbarer Webanwendungen
+
+  - from:         03/2015
+    until:        05/2018
+    position:     Frontend-Entwicklerin
+    organisation: WebSolutions Co., New York
+    summary:      Entwicklung responsiver Benutzeroberflächen für Unternehmenskunden
+
+  - from:         07/2012
+    until:        02/2015
+    position:     Junior Web-Entwicklerin
+    organisation: StartUp Dynamics, Austin
+    summary:      Unterstützung beim Aufbau von MVPs für verschiedene Startup-Projekte
+
+education:
+
+  - from:        09/2008
+    until:       05/2012
+    institution: Tech University of America
+    degree:      Bachelor of Science in Informatik
+
+  - from:        09/2004
+    until:       06/2008
+    institution: Innovative High School
+    degree:      Highschool-Abschluss
