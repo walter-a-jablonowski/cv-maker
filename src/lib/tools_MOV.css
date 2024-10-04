@@ -1,0 +1,28 @@
+.no-indent {
+  padding-left: 20px;
+}
+
+  
+.collapsible {
+  position: relative;
+}
+
+.content {
+  overflow:   hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.content.collapsed {
+  max-height: 6.1em;
+}
+
+.read-more {
+  color:    blue;
+  cursor:     pointer;
+  display:    inline-block;
+  margin-top: 5px;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}

@@ -2,10 +2,6 @@ a {
   text-decoration: none;
 }
 
-.no-indent {
-  padding-left: 20px;
-}
-
 .label {
   color:     grey;
   font-weight: bold;

@@ -94,7 +94,14 @@
     
     <section>
       <h2><?= $captions['specialSkills'] ?></h2>
-      <p><?= $data['specialSkills'] ?></p>
+      <p>
+        <div class="collapsible" data-more="<?= $captions['readMore'] ?>" data-less="<?= $captions['less'] ?>">
+          <div id="content" class="content collapsed">
+            <?= $data['specialSkills'] ?>
+          </div>
+          <span id="readMore" class="read-more"><?= $captions['readMore'] ?></span>
+        </div>
+      </p>
     </section>
     
     <section>

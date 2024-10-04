@@ -6,6 +6,7 @@
   <title>Resume</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
+    <?php require "lib/tools_MOV.css"; ?>
     <?php require "designs/$design/styles.css"; ?>
   </style>
 </head>

@@ -1,4 +1,5 @@
 
+- [ ] Shorten the mail
 - [ ] Make sidebar fully black h 100 in print layout
 
   ```
