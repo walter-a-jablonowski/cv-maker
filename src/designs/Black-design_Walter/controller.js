@@ -23,17 +23,18 @@ function toggleLanguage()
   
   if( langBtn.classList.contains('lang-en'))
   {
+    // TASK: translate
+
     langBtn.classList.remove('lang-en')
     langBtn.classList.add('lang-de')
-    langBtn.title = "Switch to English"
+    langBtn.querySelector('img').src = 'https://flagcdn.com/w20/de.png'
   }
   else
   {
     langBtn.classList.remove('lang-de')
     langBtn.classList.add('lang-en')
-    langBtn.title = 'Switch to German'
+    langBtn.querySelector('img').src = 'https://flagcdn.com/w20/us.png'
   }
-  // Here you would add logic to actually change the language of the page
 }
 
 const content = document.getElementById('content')

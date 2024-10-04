@@ -55,15 +55,19 @@
     <div class="new-page" style="padding-top: 20px;">
       <table class="misc-personal">
         <tr>
-          <td><?= $captions['born'] ?>:</td>
+          <td data-caption="born">
+            <?= $captions['born'] ?>:
+          </td>
           <td><?= $data['personal']['dateOfBirth'] ?></td>
         </tr>
         <tr>
-          <td><?= $captions['nationality'] ?>:</td>
+          <td data-caption="nationality">
+            <?= $captions['nationality'] ?>:
+          </td>
           <td><?= $data['personal']['nationality'] ?></td>
         </tr>
         <tr>
-          <td><?= $captions['maritalStatus'] ?>:</td>
+          <td data-caption="maritalStatus"><?= $captions['maritalStatus'] ?>:</td>
           <td><?= $data['personal']['maritalStatus'] ?></td>
         </tr>
       </table>
@@ -73,11 +77,11 @@
   <div class="main-content">
 
     <div class="action-buttons">
-      <button id="printBtn" class="btn btn-action" onclick="window.print();" title="Print">
+      <button id="printBtn" class="btn btn-action" onclick="window.print()">
         <i class="bi bi-printer"></i>
       </button>
-      <button id="langBtn" class="btn btn-action" onclick="toggleLanguage();" title="Toggle Language">
-        <img src="https://flagcdn.com/w20/us.png" alt="English" id="langIcon">
+      <button id="langBtn"  class="btn btn-action lang-en" onclick="toggleLanguage()">
+        <img  src="https://flagcdn.com/w20/us.png">
       </button>
     </div>
 
@@ -88,12 +92,16 @@
     <?php endif; ?>
     
     <section>
-      <h2><?= $captions['summary'] ?></h2>
+      <h2 data-caption="summary">
+        <?= $captions['summary'] ?>
+      </h2>
       <p><?= $data['summary'] ?></p>
     </section>
     
     <section>
-      <h2><?= $captions['specialSkills'] ?></h2>
+      <h2 data-caption="specialSkills">
+        <?= $captions['specialSkills'] ?>
+      </h2>
       <p>
         <div class="collapsible" data-more="<?= $captions['readMore'] ?>" data-less="<?= $captions['less'] ?>">
           <div id="content" class="content collapsed">
@@ -105,13 +113,17 @@
     </section>
     
     <section>
-      <h2><?= $captions['goals'] ?></h2>
+      <h2 data-caption="goals">
+        <?= $captions['goals'] ?>
+      </h2>
       <p><?= $data['goals'] ?></p>
     </section>
     
     <section class="new-page">
       
-      <h2><?= $captions['experience'] ?></h2>
+      <h2 data-caption="experience">
+        <?= $captions['experience'] ?>
+      </h2>
       
       <div class="timeline">
         <?php foreach( $data['experience'] as $job): ?>
@@ -141,7 +153,9 @@
       
     <section>
         
-      <h2><?= $captions['education'] ?></h2>
+      <h2 data-caption="education">
+        <?= $captions['education'] ?>
+      </h2>
       
       <div class="timeline">
         <?php foreach( $data['education'] as $edu): ?>

@@ -1,4 +1,9 @@
-<!DOCTYPE html>
+<?php
+
+use Symfony\Component\Yaml\Yaml;
+use Symfony\Component\Yaml\Exception\ParseException;
+
+?><!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -19,5 +24,11 @@
       <?php require "designs/$design/controller.js"; ?>
     </script>
   <?php endif; ?>
+<script>
+  const captions = {
+    'en': <?php echo json_encode( Yaml::parseFile("captions/en.yml")); ?>,
+    'de': <?php echo json_encode( Yaml::parseFile("captions/en.yml")); ?>
+  }
+</script>
 </body>
 </html>
