@@ -61,6 +61,15 @@ body {
   }
 }
 
+/* Common */
+
+h1, h2 {
+  color: var(--accent-color);
+  margin-bottom: 1rem;
+}
+
+/* Sidebar */
+
 .profile-img {
   width:         150px;
   /*
@@ -71,11 +80,6 @@ body {
   */
   margin-top:    0.15rem;
   margin-bottom: 0.25rem;
-}
-
-h1, h2 {
-  color: var(--accent-color);
-  margin-bottom: 1rem;
 }
 
 .sidebar h2 {
@@ -131,7 +135,54 @@ h1, h2 {
   padding-right: 8px;
 }
 
-/* Timeline */
+/* Main */
+
+/* Main: btns upper right */
+
+.action-buttons {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-action {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;  /* Reduced from 40px */
+  height: 36px; /* Reduced from 40px */
+  border: 2px solid #808080; /* Changed to grey */
+  border-radius: 8px;
+  background: linear-gradient(135deg, #f0f0f0, #ffffff);
+  color: black;
+  cursor: pointer;
+  font-size: 16px; /* Slightly reduced font size */
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.btn-action:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.btn-action img {
+  width: 18px; /* Slightly reduced from 20px */
+  height: auto;
+}
+
+.btn-action i {
+  font-size: 16px; /* Adjusted icon size */
+}
+
+/* Main: Timeline */
 
 .timeline {
   position: relative;
@@ -177,7 +228,7 @@ h1, h2 {
   font-size: 16px;
 }
 
-/* Misc */
+/* Main: Misc */
 
 .date {
   font-style: italic;
@@ -190,8 +241,10 @@ h1, h2 {
   text-align: center;
 }
 
-@media print {
+/* Print */
 
+@media print {
+  
   a {
     text-decoration: none;
     color: var(--secondary-color) !important;
@@ -202,6 +255,8 @@ h1, h2 {
     page-break-before: always;
     margin-top: 20px;
   }
+
+  /* Page */
 
   body {
     print-color-adjust: exact;
@@ -225,6 +280,23 @@ h1, h2 {
     width:   70% !important;
     padding: 1rem !important;
   }
+
+  /*
+  .main-content h2, .main-content .date {
+    color: var(--primary-color) !important;
+  }
+  */
+  .main-content a {
+    color: var(--primary-color) !important;
+  }
+
+  /* Common */
+  
+  h1, h2, .date {
+    color: var(--accent-color) !important;
+  }
+
+  /* Sidebar */
   
   .sidebar h2 {
     color: var(--secondary-color) !important;
@@ -244,15 +316,6 @@ h1, h2 {
     color: var(--primary-color) !important;
   }
 
-  h1, h2, .date {
-    color: var(--accent-color) !important;
-  }
-/*
-  .main-content h2, .main-content .date {
-    color: var(--primary-color) !important;
-  }
-*/
-  .main-content a {
-    color: var(--primary-color) !important;
-  }
+  /* Main */
+
 }

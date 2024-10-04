@@ -72,6 +72,15 @@
 
   <div class="main-content">
 
+    <div class="action-buttons">
+      <button id="printBtn" class="btn btn-action" onclick="window.print();" title="Print">
+        <i class="bi bi-printer"></i>
+      </button>
+      <button id="langBtn" class="btn btn-action" onclick="toggleLanguage();" title="Toggle Language">
+        <img src="https://flagcdn.com/w20/us.png" alt="English" id="langIcon">
+      </button>
+    </div>
+
     <?php if( ! empty( $data['personal']['logo'] )): ?>
       <div style="text-align: center;">
         <img src="users/<?= $user ?>/<?= $data['personal']['logo'] ?>" width="150">
