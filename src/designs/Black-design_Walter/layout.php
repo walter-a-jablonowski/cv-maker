@@ -13,17 +13,25 @@
       <table style="margin-left: -4px;">
         <tr>
           <td><i class="bi bi-envelope"></i></td>
-          <td><?= $data['personal']['email'] ?></td>
+          <td>
+            <a href="mailto:<?= $data['personal']['email'] ?>"><?= $data['personal']['email'] ?></a>
+          </td>
         </tr>
         <tr>
           <td><i class="bi bi-globe"></i></td>
-          <td><a href="<?= $data['personal']['url'] ?>"><?= str_replace(['https://', 'http://'], '', $data['personal']['url'] ) ?></a></td>
+          <td>
+            <a href="<?= $data['personal']['url'] ?>">
+              <?= str_replace(['https://', 'http://'], '', $data['personal']['url'] ) ?>
+            </a>
+          </td>
         </tr>
         <tr>
           <td style="vertical-align: top;"><i class="bi bi-geo-alt-fill"></i></td>
           <td>
-            <?= $data['personal']['location']['address'] ?> <br>
-            <?= $data['personal']['location']['postalCode'] ?> <?= $data['personal']['location']['city'] ?>
+            <a href="https://goo.gl/maps/RRCcuAVrxa2qfJr9A" target="_blank">
+              <?= $data['personal']['location']['address'] ?> <br>
+              <?= $data['personal']['location']['postalCode'] ?> <?= $data['personal']['location']['city'] ?>
+            </a>
           </td>
         </tr>
       </table>

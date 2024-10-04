@@ -9,7 +9,7 @@ require 'vendor/autoload.php';
 $user = 'Walter';
 // $user    = 'Demo';
 $design  = $_GET['design'] ?? 'Black-design_Walter';
-$lang    = 'de';
+$lang    = $_GET['lang']   ?? 'en';
 
 $data     = Yaml::parseFile("users/$user/cv_$lang.yml");
 $captions = Yaml::parseFile("captions/$lang.yml");
