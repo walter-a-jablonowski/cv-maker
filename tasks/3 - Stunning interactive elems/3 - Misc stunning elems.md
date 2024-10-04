@@ -3,7 +3,8 @@ Add stunning interactive elems for the web version
 
 - some collapsible with more info
 - sth cool
-- [ ] Some hori line thing besode Logo or grdient
+- [ ] Some hori line thing besode Logo or grdient (maybe)
+- [ ] QR code in sidebar below
 
 ```
 Make a stunning web developer logo based on `</>`. Be creative, make it great looking.
