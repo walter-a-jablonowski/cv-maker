@@ -29,6 +29,10 @@ use Symfony\Component\Yaml\Exception\ParseException;
     'en': <?php echo json_encode( Yaml::parseFile("captions/en.yml")); ?>,
     'de': <?php echo json_encode( Yaml::parseFile("captions/de.yml")); ?>
   }
+  const data = {
+    'en': <?php echo json_encode( Yaml::parseFile("users/$user/cv_en.yml")); ?>,
+    'de': <?php echo json_encode( Yaml::parseFile("users/$user/cv_de.yml")); ?>
+  }
 </script>
 </body>
 </html>
