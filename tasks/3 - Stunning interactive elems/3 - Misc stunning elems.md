@@ -7,7 +7,9 @@ Add stunning interactive elems for the web version
   - upper left looking like the btn
   - beside read more info box like [(i) see online version ...]
   - or as footer on first prinnted page
-- [ ] QR code in sidebar below
+- [ ] QR code in sidebar
+  - web: below
+  - print: end of pg 2
 - [ ] Some hori line thing besode Logo or grdient (maybe)
 
 ```
