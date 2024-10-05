@@ -27,7 +27,7 @@ use Symfony\Component\Yaml\Exception\ParseException;
 <script>
   const captions = {
     'en': <?php echo json_encode( Yaml::parseFile("captions/en.yml")); ?>,
-    'de': <?php echo json_encode( Yaml::parseFile("captions/en.yml")); ?>
+    'de': <?php echo json_encode( Yaml::parseFile("captions/de.yml")); ?>
   }
 </script>
 </body>

@@ -23,18 +23,31 @@ function toggleLanguage()
   
   if( langBtn.classList.contains('lang-en'))
   {
-    // TASK: translate
-
+    translate('de')
+    
     langBtn.classList.remove('lang-en')
     langBtn.classList.add('lang-de')
     langBtn.querySelector('img').src = 'https://flagcdn.com/w20/de.png'
   }
   else
   {
+    translate('en')
+
     langBtn.classList.remove('lang-de')
     langBtn.classList.add('lang-en')
     langBtn.querySelector('img').src = 'https://flagcdn.com/w20/us.png'
   }
+}
+
+function translate(lang)
+{
+  const elements = document.querySelectorAll('[data-caption]')
+  
+  elements.forEach( element => {
+    const captionKey = element.getAttribute('data-caption')
+    if( captions[lang][captionKey])
+      element.textContent = captions[lang][captionKey]
+  })
 }
 
 const content = document.getElementById('content')
