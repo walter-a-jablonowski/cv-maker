@@ -112,7 +112,7 @@
         <?= $data['summary'] ?>
       </p>
     </section>
-    
+
     <section>
       <h2 data-caption="specialSkills">
         <?= $captions['specialSkills'] ?>
@@ -164,8 +164,8 @@
               </p>
             <?php endif; ?>
           </div>
-          <?php endforeach; ?>
-        </div>
+        <?php endforeach; ?>
+      </div>
     </section>
       
     <section>

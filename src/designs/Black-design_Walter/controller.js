@@ -60,7 +60,8 @@ function translate(lang)
       dataValue = dataValue[key]
     })
     if(dataValue)
-      element.textContent = dataValue
+      // element.textContent = dataValue
+      element.innerHTML = dataValue
   })
 }
 
