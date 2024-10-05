@@ -64,6 +64,22 @@ h1, h2 {
   margin-bottom: 1rem;
 }
 
+.info {
+  display:       none;  /* print only */
+  margin-left:   40px;
+  border:        1px solid grey;
+  border-radius: 11px;
+  padding:       8px;
+  font-size:     15px;
+  color:       grey;
+}
+
+@media print {
+  .info {
+    display: inline;
+  }
+}
+
 /* Sidebar */
 
 .profile-img {

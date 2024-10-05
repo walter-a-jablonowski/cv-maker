@@ -132,6 +132,9 @@
             <?= $data['specialSkills'] ?>
           </div>
           <span id="readMore" class="read-more"><?= $captions['readMore'] ?></span>
+          <span class="info">
+            <i class="bi bi-info-circle"></i> see online version at <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
+          </span>
         </div>
       </p>
     </section>
