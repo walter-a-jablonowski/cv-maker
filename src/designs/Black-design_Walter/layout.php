@@ -1,7 +1,7 @@
 <div class="container">
   <div class="sidebar">
     
-    <img src="<?= $img ?>" class="profile-img">
+    <img src="<?= $img ?>" class="profile-img" style="max-width: 200px;">
     
     <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
       <?= $data['personal']['name'] ?>
@@ -85,6 +85,15 @@
         </tr>
       </table>
     </div>
+
+    <?php if( is_file("users/$user/qr.png")): ?>
+      <div style="padding: 20px 0 5px 0;">
+        Scan me
+      </div>
+      <div>
+        <img src="users/<?= $user ?>/qr.png" style="max-width: 200px;">
+      </div>
+    <?php endif; ?>
   </div>
 
   <div class="main-content">
@@ -100,7 +109,7 @@
 
     <?php if( ! empty( $data['personal']['logo'] )): ?>
       <div style="text-align: center;">
-        <img src="users/<?= $user ?>/<?= $data['personal']['logo'] ?>" width="150">
+        <img src="users/<?= $user ?>/<?= $data['personal']['logo'] ?>"  style="max-width: 150px;">
       </div>
     <?php endif; ?>
     

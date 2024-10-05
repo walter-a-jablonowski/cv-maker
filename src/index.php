@@ -23,6 +23,9 @@ $html = ob_get_clean();
 file_put_contents("users/$user/public/cv.html", $html);
 copy("users/$user/img.png", "users/$user/public/img.png");
 
+if( is_file("users/$user/qr.png"))
+  copy("users/$user/qr.png", "users/$user/public/qr.png");
+
 $img = "users/$user/img.png";
 
 ob_start();
