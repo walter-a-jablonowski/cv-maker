@@ -131,7 +131,7 @@
       <h2 data-caption="goals">
         <?= $captions['goals'] ?>
       </h2>
-      <div data-entry="goals">  <!-- ul can't be inside p (html unsed in yml) -->
+      <div data-entry="goals">  <!-- ul can't be inside p (html used in yml) -->
         <?= $data['goals'] ?>
       </div>
     </section>
