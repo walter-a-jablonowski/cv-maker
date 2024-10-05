@@ -50,6 +50,18 @@ function translate(lang)
     if( captions[lang][captionKey])
       element.textContent = captions[lang][captionKey]
   })
+  
+  const dataElements = document.querySelectorAll('[data-entry]')
+  
+  dataElements.forEach( element => {
+    const entryKey = element.getAttribute('data-entry').split('.')
+    let  dataValue = data[lang]
+    entryKey.forEach( key => {
+      dataValue = dataValue[key]
+    })
+    if(dataValue)
+      element.textContent = dataValue
+  })
 }
 
 const content = document.getElementById('content')
