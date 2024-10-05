@@ -1,12 +1,16 @@
 <div class="container">
   <div class="sidebar">
     
-    <img src="<?= $img ?>" alt="<?= $data['personal']['name'] ?>" class="profile-img">
+    <img src="<?= $img ?>" class="profile-img">
     
-    <h1 style="font-size: 2.4vw;"><?= $data['personal']['name'] ?></h1>  <!-- fix font size so that it matches container -->
+    <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
+      <?= $data['personal']['name'] ?>
+    </h1>
     
     <?php if( ! empty( $data['personal']['summary'] )): ?>
-      <p><?= $data['personal']['summary'] ?></p>
+      <p data-entry="personal.summary">
+        <?= $data['personal']['summary'] ?>
+      </p>
     <?php endif; ?>
 
     <div class="contact-info">
@@ -46,6 +50,7 @@
       </div>
     <?php endforeach; ?>
 
+    <!-- TASK: #captions -->
     <div class="lang-skills" style="margin-top: 40px;">
       <?php foreach( $data['skills']['lang'] as $language => $proficiency): ?>
         <span class="lang-skill"><?= $language ?>: <?= $proficiency ?></span>
@@ -58,17 +63,25 @@
           <td data-caption="born">
             <?= $captions['born'] ?>:
           </td>
-          <td><?= $data['personal']['dateOfBirth'] ?></td>
+          <td data-entry="personal.dateOfBirth">
+            <?= $data['personal']['dateOfBirth'] ?>
+          </td>
         </tr>
         <tr>
           <td data-caption="nationality">
             <?= $captions['nationality'] ?>:
           </td>
-          <td><?= $data['personal']['nationality'] ?></td>
+          <td data-entry="personal.nationality">
+            <?= $data['personal']['nationality'] ?>
+          </td>
         </tr>
         <tr>
-          <td data-caption="maritalStatus"><?= $captions['maritalStatus'] ?>:</td>
-          <td><?= $data['personal']['maritalStatus'] ?></td>
+          <td data-caption="maritalStatus">
+            <?= $captions['maritalStatus'] ?>:
+          </td>
+          <td data-entry="personal.maritalStatus">
+            <?= $data['personal']['maritalStatus'] ?>
+          </td>
         </tr>
       </table>
     </div>
@@ -95,7 +108,9 @@
       <h2 data-caption="summary">
         <?= $captions['summary'] ?>
       </h2>
-      <p><?= $data['summary'] ?></p>
+      <p data-entry="summary">
+        <?= $data['summary'] ?>
+      </p>
     </section>
     
     <section>
@@ -104,7 +119,7 @@
       </h2>
       <p>
         <div class="collapsible" data-more="<?= $captions['readMore'] ?>" data-less="<?= $captions['less'] ?>">
-          <div id="content" class="content collapsed">
+          <div id="content" data-entry="specialSkills" class="content collapsed">
             <?= $data['specialSkills'] ?>
           </div>
           <span id="readMore" class="read-more"><?= $captions['readMore'] ?></span>
@@ -116,7 +131,9 @@
       <h2 data-caption="goals">
         <?= $captions['goals'] ?>
       </h2>
-      <p><?= $data['goals'] ?></p>
+      <p data-entry="goals">
+        <?= $data['goals'] ?>
+      </p>
     </section>
     
     <section class="new-page">
