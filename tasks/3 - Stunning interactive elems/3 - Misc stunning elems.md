@@ -1,7 +1,7 @@
 
 Add stunning interactive elems for the web version
 
-- some collapsible with more info
+- [x] some collapsible with more info
 - sth cool
 - [ ] add a link `Online version: is.gd/waj_cv`
   - upper left looking like the btn
