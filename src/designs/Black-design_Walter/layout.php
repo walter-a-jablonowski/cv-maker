@@ -131,9 +131,9 @@
       <h2 data-caption="goals">
         <?= $captions['goals'] ?>
       </h2>
-      <p data-entry="goals">
+      <div data-entry="goals">  <!-- ul can't be inside p (html unsed in yml) -->
         <?= $data['goals'] ?>
-      </p>
+      </div>
     </section>
     
     <section class="new-page">
