@@ -44,7 +44,13 @@ function toggleLanguage()
 function translate(lang)
 {
   let elems = document.querySelectorAll('[data-caption]')
-  
+  // let elems = document.querySelectorAll('[data-lcaption]')
+  // or use same names
+  // let elems = document.querySelectorAll('[data-caption]:not([data-list] [data-caption])')
+  // let elems = document.querySelectorAll('[data-caption]').filter(elem => {
+  //   return !elem.closest('[data-list]')
+  // })
+
   elems.forEach( elem => {
     const key = elem.getAttribute('data-caption')
     if( captions[lang][key])
@@ -60,7 +66,6 @@ function translate(lang)
       value = value[sub]
     })
     if( value )
-      // elem.textContent = value
       elem.innerHTML = value
   })
 }

@@ -560,32 +560,35 @@ Enthusiastic about implementing microservices architecture and serverless comput
         Experience      </h2>
       
       <div class="timeline">
-                  <div class="experience-item">
+                  <div class="experience-item" data-list="experience">
             <h3>
               <span class="date">06/2018 - Present</span>
               &nbsp;
               Senior Full Stack Developer            </h3>
                           <p class="details">
-                                  <span class="label">Company:</span> TechInnovate Inc., San Francisco                                                  <br>
-                                                  Leading development of scalable web applications                              </p>
+                                  <div><span class="label" data-lcaption="company">Company:</span> TechInnovate Inc., San Francisco</div>
+                                                  <div data-="summary">Leading development of scalable web applications</div>
+                              </p>
                       </div>
-                  <div class="experience-item">
+                  <div class="experience-item" data-list="experience">
             <h3>
               <span class="date">03/2015 - 05/2018</span>
               &nbsp;
               Frontend Developer            </h3>
                           <p class="details">
-                                  <span class="label">Company:</span> WebSolutions Co., New York                                                  <br>
-                                                  Developed responsive user interfaces for enterprise clients                              </p>
+                                  <div><span class="label" data-lcaption="company">Company:</span> WebSolutions Co., New York</div>
+                                                  <div data-="summary">Developed responsive user interfaces for enterprise clients</div>
+                              </p>
                       </div>
-                  <div class="experience-item">
+                  <div class="experience-item" data-list="experience">
             <h3>
               <span class="date">07/2012 - 02/2015</span>
               &nbsp;
               Junior Web Developer            </h3>
                           <p class="details">
-                                  <span class="label">Company:</span> StartUp Dynamics, Austin                                                  <br>
-                                                  Assisted in building MVPs for various startup projects                              </p>
+                                  <div><span class="label" data-lcaption="company">Company:</span> StartUp Dynamics, Austin</div>
+                                                  <div data-="summary">Assisted in building MVPs for various startup projects</div>
+                              </p>
                       </div>
               </div>
     </section>
@@ -596,21 +599,21 @@ Enthusiastic about implementing microservices architecture and serverless comput
         Education      </h2>
       
       <div class="timeline">
-                  <div class="education-item">
+                  <div class="education-item" data-list="education">
             <h3>
               <span class="date">07/2012 - 02/2015</span>
               &nbsp;
               Tech University of America            </h3>
                           <p class="details">
-                                                                  <span class="label">Degree:</span> Bachelor of Science in Computer Science                              </p>
+                                                  <div class="label" data-lcaption="degree">Degree:</span> Bachelor of Science in Computer Science                              </p>
                       </div>
-                  <div class="education-item">
+                  <div class="education-item" data-list="education">
             <h3>
               <span class="date">07/2012 - 02/2015</span>
               &nbsp;
               Innovative High School            </h3>
                           <p class="details">
-                                                                  <span class="label">Degree:</span> High School Diploma                              </p>
+                                                  <div class="label" data-lcaption="degree">Degree:</span> High School Diploma                              </p>
                       </div>
               </div>
     </section>
@@ -669,7 +672,12 @@ function toggleLanguage()
 function translate(lang)
 {
   let elems = document.querySelectorAll('[data-caption]')
-  
+  // let elems = document.querySelectorAll('[data-lcaption]')
+  // let elems = document.querySelectorAll('[data-caption]:not([data-list] [data-caption])')
+  // let elems = document.querySelectorAll('[data-caption]').filter(elem => {
+  //   return !elem.closest('[data-list]')
+  // })
+
   elems.forEach( elem => {
     const key = elem.getAttribute('data-caption')
     if( captions[lang][key])
@@ -685,12 +693,11 @@ function translate(lang)
       value = value[sub]
     })
     if( value )
-      // elem.textContent = value
       elem.innerHTML = value
   })
 }
 
-const content = document.getElementById('content')
+const content  = document.getElementById('content')
 const readMore = document.getElementById('readMore')
 
 readMore.addEventListener('click', function() {
