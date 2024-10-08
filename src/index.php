@@ -6,8 +6,8 @@ use Symfony\Component\Yaml\Exception\ParseException;
 require 'vendor/autoload.php';
 
 
-$user = 'Walter';
-// $user    = 'Demo';
+// $user = 'Walter';
+$user    = 'Demo';
 $design  = $_GET['design'] ?? 'Black-design_Walter';
 $lang    = $_GET['lang']   ?? 'en';
 
