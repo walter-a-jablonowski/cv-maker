@@ -68,6 +68,20 @@ function translate(lang)
     if( value )
       elem.innerHTML = value
   })
+/*
+  lists = document.querySelectorAll('[data-list]')
+  elems = document.querySelectorAll('[data-list] [data-key]')
+
+  elems.forEach( elem => {
+    const key   = elem.getAttribute('data-key').split('.')
+    let   value = data[lang]
+    key.forEach( sub => {
+      value = value[sub]
+    })
+    if( value )
+      elem.innerHTML = value
+  })
+*/
 }
 
 const content  = document.getElementById('content')
