@@ -7,6 +7,76 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "/G/Meine Ablage/80-dools/x_env_info.md",
+			"settings":
+			{
+				"buffer_size": 110,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": ".gitignore",
+			"settings":
+			{
+				"buffer_size": 29,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/Meine Ablage/50 Activity tree/15 VISION  Become superh/11 VISION  Independence (#Indep)/VISION  Fin Unabh (#Biz)/Dmp job, bedder job/Sales/Vorlagen/AI CV SAV/cv_de.yml",
+			"settings":
+			{
+				"buffer_size": 2855,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "src/users/Walter/cv_en.yml",
+			"settings":
+			{
+				"buffer_size": 2815,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/Meine Ablage/50 Activity tree/15 VISION  Become superh/11 VISION  Independence (#Indep)/VISION  Fin Unabh (#Biz)/Dmp job, bedder job/Sales/Vorlagen/AI CV SAV/cv_en.yml",
+			"settings":
+			{
+				"buffer_size": 2815,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/Meine Ablage/81-dev/kb/Replit.md",
+			"settings":
+			{
+				"buffer_size": 828,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "/G/Meine Ablage/50 Activity tree/11 Common/Acnds/login.yml",
+			"settings":
+			{
+				"buffer_size": 29199,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/Users/User/.gitconfig",
+			"settings":
+			{
+				"buffer_size": 258,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -48,10 +118,18 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Users/User/local/cv-maker"
+		"/C/Users/User/local/cv-maker",
+		"/C/Users/User/local/cv-maker/src",
+		"/C/Users/User/local/cv-maker/tasks",
+		"/G/Meine Ablage/50 Activity tree/15 VISION  Become superh/11 VISION  Independence (#Indep)/VISION  Fin Unabh (#Biz)/Dmp job, bedder job/Sales/Vorlagen/AI CV SAV"
 	],
 	"file_history":
 	[
+		"/G/Meine Ablage/50 Activity tree/11 Common/Buyings (common)/CURRENT VIEW (#buyings).md",
+		"/C/Users/User/local/cv-maker/src/composer.json",
+		"/C/xampp/apache/conf/httpd.conf",
+		"/C/xampp8025/apache/conf/httpd.conf",
+		"/C/Users/User/local/cv-maker/LICENSE",
 		"/C/Users/User/gd/85 Biz/28 GOAL Nachhaltig verdienen/x Länger - Coins, Börse/Coins/Geldforscher zu Coins.md",
 		"/C/Users/User/gd/08 Cmn misc/Login/login.bac.yml",
 		"/C/Users/User/gd/85 Biz/28 GOAL Nachhaltig verdienen/x Länger - Crybdo, Börse/Bitcoin Banken Revolution - 40 deutsche Banken in den Startlöchern.desktop",
@@ -174,12 +252,7 @@
 		"/C/Users/User/gd/50-dev-proj/31 Biz/Dev/dev-pg/dist/imprint.html",
 		"/C/Users/User/gd/50-dev-proj/31 Biz/Dev/dev-pg/dist/privacy.html",
 		"/C/Users/User/gd/50-dev-proj/31 Biz/Dev/dev-pg/dist/pages/_includes/footer.html",
-		"/C/Users/User/gd/50-dev-proj/31 Biz/Dev/dev-pg/dist/pages/_includes/header.html",
-		"/C/Users/User/gd/50-dev-proj/31 Biz/Dev/dev-pg/dist/composer.json",
-		"/C/Users/User/gd/50-dev-lib/web/src2/app/args/mngm/Common.md",
-		"/C/Users/User/gd/08 Cmn misc/Snipp.bac/Brief, Schreiben/gigi - sgh.yml",
-		"/C/Users/User/gd/08 Cmn misc/Snipp.bac/Brief, Schreiben/gigi - mfgigi.yml",
-		"/C/Users/User/gd/50-dev-lib/web/src2/app/just-quick/src/AppBase.php"
+		"/C/Users/User/gd/50-dev-proj/31 Biz/Dev/dev-pg/dist/pages/_includes/header.html"
 	],
 	"find":
 	{
@@ -197,6 +270,12 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"github",
+			"deko",
+			"dampf",
+			"sohl",
+			"Einlegesohlen",
+			"xampp8025/"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -204,6 +283,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"xampp/"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -214,8 +294,241 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "/G/Meine Ablage/80-dools/x_env_info.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 110,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								110,
+								110
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": ".gitignore",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								29,
+								29
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Ignore.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "/G/Meine Ablage/50 Activity tree/15 VISION  Become superh/11 VISION  Independence (#Indep)/VISION  Fin Unabh (#Biz)/Dmp job, bedder job/Sales/Vorlagen/AI CV SAV/cv_de.yml",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 2855,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 648.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "src/users/Walter/cv_en.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2181,
+								2181
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 756.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/G/Meine Ablage/50 Activity tree/15 VISION  Become superh/11 VISION  Independence (#Indep)/VISION  Fin Unabh (#Biz)/Dmp job, bedder job/Sales/Vorlagen/AI CV SAV/cv_en.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2815,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1517,
+								1517
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "/G/Meine Ablage/81-dev/kb/Replit.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 828,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								464,
+								464
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/G/Meine Ablage/50 Activity tree/11 Common/Acnds/login.yml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 29199,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								13067,
+								13067
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 10885.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "/C/Users/User/.gitconfig",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 258,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								227,
+								227
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Git Formats/Git Config.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				}
 			]
 		}
 	],
