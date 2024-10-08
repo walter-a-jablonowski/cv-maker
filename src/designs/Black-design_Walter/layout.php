@@ -8,7 +8,7 @@
     </h1>
     
     <?php if( ! empty( $data['personal']['summary'] )): ?>
-      <p data-entry="personal.summary">
+      <p data-key="personal.summary">
         <?= $data['personal']['summary'] ?>
       </p>
     <?php endif; ?>
@@ -63,7 +63,7 @@
           <td data-caption="born">
             <?= $captions['born'] ?>:
           </td>
-          <td data-entry="personal.dateOfBirth">
+          <td data-key="personal.dateOfBirth">
             <?= $data['personal']['dateOfBirth'] ?>
           </td>
         </tr>
@@ -71,7 +71,7 @@
           <td data-caption="nationality">
             <?= $captions['nationality'] ?>:
           </td>
-          <td data-entry="personal.nationality">
+          <td data-key="personal.nationality">
             <?= $data['personal']['nationality'] ?>
           </td>
         </tr>
@@ -79,7 +79,7 @@
           <td data-caption="maritalStatus">
             <?= $captions['maritalStatus'] ?>:
           </td>
-          <td data-entry="personal.maritalStatus">
+          <td data-key="personal.maritalStatus">
             <?= $data['personal']['maritalStatus'] ?>
           </td>
         </tr>
@@ -117,7 +117,7 @@
       <h2 data-caption="summary">
         <?= $captions['summary'] ?>
       </h2>
-      <p data-entry="summary">
+      <p data-key="summary">
         <?= $data['summary'] ?>
       </p>
     </section>
@@ -128,7 +128,7 @@
       </h2>
       <p>
         <div class="collapsible" data-more="<?= $captions['readMore'] ?>" data-less="<?= $captions['less'] ?>">
-          <div id="content" data-entry="specialSkills" class="content collapsed">
+          <div id="content" data-key="specialSkills" class="content collapsed">
             <?= $data['specialSkills'] ?>
           </div>
           <span id="readMore" class="read-more"><?= $captions['readMore'] ?></span>
@@ -143,7 +143,7 @@
       <h2 data-caption="goals">
         <?= $captions['goals'] ?>
       </h2>
-      <div data-entry="goals">  <!-- ul can't be inside p (html used in yml) -->
+      <div data-key="goals">  <!-- ul can't be inside p (html used in yml) -->
         <?= $data['goals'] ?>
       </div>
     </section>

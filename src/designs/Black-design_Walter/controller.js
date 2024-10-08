@@ -43,29 +43,29 @@ function toggleLanguage()
 
 function translate(lang)
 {
-  const elements = document.querySelectorAll('[data-caption]')
+  let elems = document.querySelectorAll('[data-caption]')
   
-  elements.forEach( element => {
-    const captionKey = element.getAttribute('data-caption')
-    if( captions[lang][captionKey])
-      element.textContent = captions[lang][captionKey]
+  elems.forEach( elem => {
+    const key = elem.getAttribute('data-caption')
+    if( captions[lang][key])
+      elem.textContent = captions[lang][key]
   })
   
-  const dataElements = document.querySelectorAll('[data-entry]')
+  elems = document.querySelectorAll('[data-key]')
   
-  dataElements.forEach( element => {
-    const entryKey = element.getAttribute('data-entry').split('.')
-    let  dataValue = data[lang]
-    entryKey.forEach( key => {
-      dataValue = dataValue[key]
+  elems.forEach( elem => {
+    const key   = elem.getAttribute('data-key').split('.')
+    let   value = data[lang]
+    key.forEach( sub => {
+      value = value[sub]
     })
-    if(dataValue)
-      // element.textContent = dataValue
-      element.innerHTML = dataValue
+    if( value )
+      // elem.textContent = value
+      elem.innerHTML = value
   })
 }
 
-const content = document.getElementById('content')
+const content  = document.getElementById('content')
 const readMore = document.getElementById('readMore')
 
 readMore.addEventListener('click', function() {

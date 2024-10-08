@@ -379,7 +379,7 @@ h1, h2 {
     <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
       Jane B. Smith    </h1>
     
-          <p data-entry="personal.summary">
+          <p data-key="personal.summary">
         Full Stack Developer      </p>
     
     <div class="contact-info">
@@ -469,21 +469,21 @@ h1, h2 {
           <td data-caption="born">
             Born:
           </td>
-          <td data-entry="personal.dateOfBirth">
+          <td data-key="personal.dateOfBirth">
             1990-05-15          </td>
         </tr>
         <tr>
           <td data-caption="nationality">
             Nationality:
           </td>
-          <td data-entry="personal.nationality">
+          <td data-key="personal.nationality">
             American          </td>
         </tr>
         <tr>
           <td data-caption="maritalStatus">
             Marital status:
           </td>
-          <td data-entry="personal.maritalStatus">
+          <td data-key="personal.maritalStatus">
             married          </td>
         </tr>
       </table>
@@ -515,7 +515,7 @@ h1, h2 {
     <section>
       <h2 data-caption="summary">
         Summary      </h2>
-      <p data-entry="summary">
+      <p data-key="summary">
         
 10 years of experience in full stack development with a focus on JavaScript-based applications. Proficient in modern frameworks like React and Node.js, with a passion for creating scalable and efficient web solutions. Strong background in cloud technologies and DevOps practices.
       </p>
@@ -526,7 +526,7 @@ h1, h2 {
         Special skills      </h2>
       <p>
         <div class="collapsible" data-more="Read more ..." data-less="less">
-          <div id="content" data-entry="specialSkills" class="content collapsed">
+          <div id="content" data-key="specialSkills" class="content collapsed">
             
 Enthusiastic about implementing microservices architecture and serverless computing. Experienced in optimizing application performance and implementing robust security measures. Skilled in mentoring junior developers and leading agile development teams.
           </div>
@@ -541,7 +541,7 @@ Enthusiastic about implementing microservices architecture and serverless comput
     <section>
       <h2 data-caption="goals">
         Goals      </h2>
-      <div data-entry="goals">  <!-- ul can't be inside p (html used in yml) -->
+      <div data-key="goals">  <!-- ul can't be inside p (html used in yml) -->
         
 <ul class="no-indent">
   <li>Contribute to open-source projects</li>
@@ -668,25 +668,25 @@ function toggleLanguage()
 
 function translate(lang)
 {
-  const elements = document.querySelectorAll('[data-caption]')
+  let elems = document.querySelectorAll('[data-caption]')
   
-  elements.forEach( element => {
-    const captionKey = element.getAttribute('data-caption')
-    if( captions[lang][captionKey])
-      element.textContent = captions[lang][captionKey]
+  elems.forEach( elem => {
+    const key = elem.getAttribute('data-caption')
+    if( captions[lang][key])
+      elem.textContent = captions[lang][key]
   })
   
-  const dataElements = document.querySelectorAll('[data-entry]')
+  elems = document.querySelectorAll('[data-key]')
   
-  dataElements.forEach( element => {
-    const entryKey = element.getAttribute('data-entry').split('.')
-    let  dataValue = data[lang]
-    entryKey.forEach( key => {
-      dataValue = dataValue[key]
+  elems.forEach( elem => {
+    const key   = elem.getAttribute('data-key').split('.')
+    let   value = data[lang]
+    key.forEach( sub => {
+      value = value[sub]
     })
-    if(dataValue)
-      // element.textContent = dataValue
-      element.innerHTML = dataValue
+    if( value )
+      // elem.textContent = value
+      elem.innerHTML = value
   })
 }
 
