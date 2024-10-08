@@ -168,7 +168,7 @@
               <p class="details">
                 <?php if( ! empty( $job['organisation'] )): ?>
                   <div>
-                    <span class="label" data-lcaption="company">Company</span>: <span data-lkey="organisation"><?= $job['organisation'] ?></span>
+                    <span class="label" data-caption="company">Company</span>: <span data-lkey="organisation"><?= $job['organisation'] ?></span>
                   </div>
                 <?php endif; ?>
                 <?php if( ! empty( $job['summary'] )): ?>
@@ -204,7 +204,7 @@
                 <?php endif; ?>
                 <?php if( ! empty( $edu['degree'] )): ?>
                   <div>
-                    <span class="label" data-lcaption="degree">Degree</span>: <span data-lkey="degree"><?= $edu['degree'] ?></span>
+                    <span class="label" data-caption="degree">Degree</span>: <span data-lkey="degree"><?= $edu['degree'] ?></span>
                   </div>
                 <?php endif; ?>
               </p>
