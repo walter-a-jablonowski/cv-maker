@@ -1,5 +1,6 @@
 
 - [ ] Shorten the mail
+- [ ] new QR code
 - [ ] Make sidebar fully black h 100 in print layout
 
   ```

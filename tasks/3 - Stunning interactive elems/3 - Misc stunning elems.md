@@ -3,7 +3,7 @@ Add stunning interactive elems for the web version
 
 - [x] some collapsible with more info
 - sth cool
-- [ ] add a link `Online version: is.gd/waj_cv`
+- [x] add a link `Online version: is.gd/waj_cv`
   - upper left looking like the btn
   - beside read more info box like [(i) see online version ...]
   - or as footer on first prinnted page
