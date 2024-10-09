@@ -1,6 +1,8 @@
 function translate(lang)
 {
-  transl('captions', 'caption', lang)
+  transl('captions', 'caption', lang)  // TASK: maybe we don't really need captions as list
+  // document.querySelectorAll(`[data-caption]`)
+  // elems.forEach( elem => { translSetString(elem, vars, attr, lang) })
   transl('data', 'key', lang)
 }
 
