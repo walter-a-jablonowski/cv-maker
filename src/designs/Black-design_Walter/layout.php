@@ -51,9 +51,11 @@
     <?php endforeach; ?>
 
     <!-- TASK: #captions -->
-    <div class="lang-skills" style="margin-top: 40px;">
+    <div class="lang-skills" data-list="languages" style="margin-top: 40px;">
       <?php foreach( $data['skills']['lang'] as $language => $proficiency): ?>
-        <span class="lang-skill"><?= $language ?>: <?= $proficiency ?></span>
+        <span class="lang-skill">
+          <span data-lcaption="lang"><?= $language ?></span>: <span data-list="level"><?= $proficiency ?></span>
+        </span>
       <?php endforeach; ?>
     </div>
       
@@ -159,20 +161,20 @@
           <div class="experience-item" data-list="experience">
             <h3>
               <span class="date">
-                <span data-lkey="from"><?= $job['from'] ?></span> - <span data-lkey="until"><?= $job['until'] ?></span>
+                <span data-key="from"><?= $job['from'] ?></span> - <span data-key="until"><?= $job['until'] ?></span>
               </span>
               &nbsp;
-              <span data-lkey="position"><?= $job['position'] ?></span>
+              <span data-key="position"><?= $job['position'] ?></span>
             </h3>
             <?php if( ! empty( $job['organisation']) || ! empty( $job['summary'])): ?>
               <p class="details">
                 <?php if( ! empty( $job['organisation'] )): ?>
                   <div>
-                    <span class="label" data-caption="company">Company</span>: <span data-lkey="organisation"><?= $job['organisation'] ?></span>
+                    <span class="label" data-caption="company">Company</span>: <span data-key="organisation"><?= $job['organisation'] ?></span>
                   </div>
                 <?php endif; ?>
                 <?php if( ! empty( $job['summary'] )): ?>
-                  <div data-lkey="summary"><?= $job['summary'] ?></div>
+                  <div data-key="summary"><?= $job['summary'] ?></div>
                 <?php endif; ?>
               </p>
             <?php endif; ?>
@@ -192,19 +194,19 @@
           <div class="education-item" data-list="education">
             <h3>
               <span class="date">
-                <span data-lkey="from"><?= $edu['from'] ?></span> - <span data-lkey="until"><?= $edu['until'] ?></span>
+                <span data-key="from"><?= $edu['from'] ?></span> - <span data-key="until"><?= $edu['until'] ?></span>
               </span>
               &nbsp;
-              <span data-lkey="institution"><?= $edu['institution'] ?></span>
+              <span data-key="institution"><?= $edu['institution'] ?></span>
             </h3>
             <?php if( ! empty( $edu['summary']) || ! empty( $edu['degree'])): ?>
               <p class="details">
                 <?php if( ! empty( $edu['summary'] )): ?>
-                  <div data-lkey="summary"><?= $edu['summary'] ?></div>
+                  <div data-key="summary"><?= $edu['summary'] ?></div>
                 <?php endif; ?>
                 <?php if( ! empty( $edu['degree'] )): ?>
                   <div>
-                    <span class="label" data-caption="degree">Degree</span>: <span data-lkey="degree"><?= $edu['degree'] ?></span>
+                    <span class="label" data-caption="degree">Degree</span>: <span data-key="degree"><?= $edu['degree'] ?></span>
                   </div>
                 <?php endif; ?>
               </p>

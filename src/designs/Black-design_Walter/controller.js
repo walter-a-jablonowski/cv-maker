@@ -69,6 +69,8 @@ function translate(lang)
       elem.innerHTML = value
   })
 /*
+  // TASK: add lcaption
+
   lists = document.querySelectorAll('[data-list]')
   elems = document.querySelectorAll('[data-list] [data-key]')
 

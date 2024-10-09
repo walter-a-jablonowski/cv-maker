@@ -1,6 +1,7 @@
 
 - [ ] Shorten the mail
 - [ ] new QR code
+- [ ] move commonly used code from designs
 - [ ] Make sidebar fully black h 100 in print layout
 
   ```
