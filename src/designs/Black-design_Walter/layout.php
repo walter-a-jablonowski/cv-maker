@@ -1,19 +1,19 @@
 <?php
 
-extract($args);  // TASK
+// extract($args);
 
 ?><div class="container">
   <div class="sidebar">
     
-    <img src="<?= $img ?>" class="profile-img" style="max-width: 200px;">
+    <img src="<?= $args['img'] ?>" class="profile-img" style="max-width: 200px;">
     
     <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
-      <?= $data['personal']['name'] ?>
+      <?= $args['data']['personal']['name'] ?>
     </h1>
     
-    <?php if( ! empty( $data['personal']['summary'] )): ?>
+    <?php if( ! empty( $args['data']['personal']['summary'] )): ?>
       <p data-key="personal.summary">
-        <?= $data['personal']['summary'] ?>
+        <?= $args['data']['personal']['summary'] ?>
       </p>
     <?php endif; ?>
 
@@ -22,14 +22,14 @@ extract($args);  // TASK
         <tr>
           <td><i class="bi bi-envelope"></i></td>
           <td>
-            <a href="mailto:<?= $data['personal']['email'] ?>"><?= $data['personal']['email'] ?></a>
+            <a href="mailto:<?= $args['data']['personal']['email'] ?>"><?= $args['data']['personal']['email'] ?></a>
           </td>
         </tr>
         <tr>
           <td><i class="bi bi-globe"></i></td>
           <td>
-            <a href="<?= $data['personal']['url'] ?>">
-              <?= str_replace(['https://', 'http://'], '', $data['personal']['url'] ) ?>
+            <a href="<?= $args['data']['personal']['url'] ?>">
+              <?= str_replace(['https://', 'http://'], '', $args['data']['personal']['url'] ) ?>
             </a>
           </td>
         </tr>
@@ -37,15 +37,15 @@ extract($args);  // TASK
           <td style="vertical-align: top;"><i class="bi bi-geo-alt-fill"></i></td>
           <td>
             <a href="https://goo.gl/maps/RRCcuAVrxa2qfJr9A" target="_blank">
-              <?= $data['personal']['location']['address'] ?> <br>
-              <?= $data['personal']['location']['postalCode'] ?> <?= $data['personal']['location']['city'] ?>
+              <?= $args['data']['personal']['location']['address'] ?> <br>
+              <?= $args['data']['personal']['location']['postalCode'] ?> <?= $args['data']['personal']['location']['city'] ?>
             </a>
           </td>
         </tr>
       </table>
     </div>
 
-    <?php foreach( $data['skills']['dev'] as $skill => $level): ?>
+    <?php foreach( $args['data']['skills']['dev'] as $skill => $level ): ?>
       <div class="skill" style="margin-top: 20px;">
         <div class="skill-name"><?= $skill ?></div>
         <div class="skill-bar">
@@ -55,9 +55,9 @@ extract($args);  // TASK
     <?php endforeach; ?>
 
     <div class="lang-skills" data-list="languages" style="margin-top: 40px;">
-      <?php foreach( $data['skills']['lang'] as $lang => $level ): ?>
+      <?php foreach( $args['data']['skills']['lang'] as $lang => $level ): ?>
         <span class="lang-skill">
-          <span data-caption="<?= $lang ?>"><?= $captions[$lang] ?></span>: <span data-caption="<?= $level ?>"><?= $captions[$level] ?></span>
+          <span data-caption="<?= $lang ?>"><?= $args['captions'][$lang] ?></span>: <span data-caption="<?= $level ?>"><?= $args['captions'][$level] ?></span>
         </span>
       <?php endforeach; ?>
     </div>
@@ -66,37 +66,37 @@ extract($args);  // TASK
       <table class="misc-personal">
         <tr>
           <td data-caption="born">
-            <?= $captions['born'] ?>:
+            <?= $args['captions']['born'] ?>:
           </td>
           <td data-key="personal.dateOfBirth">
-            <?= $data['personal']['dateOfBirth'] ?>
+            <?= $args['data']['personal']['dateOfBirth'] ?>
           </td>
         </tr>
         <tr>
           <td data-caption="nationality">
-            <?= $captions['nationality'] ?>:
+            <?= $args['captions']['nationality'] ?>:
           </td>
           <td data-key="personal.nationality">
-            <?= $data['personal']['nationality'] ?>
+            <?= $args['data']['personal']['nationality'] ?>
           </td>
         </tr>
         <tr>
           <td data-caption="maritalStatus">
-            <?= $captions['maritalStatus'] ?>:
+            <?= $args['captions']['maritalStatus'] ?>:
           </td>
           <td data-key="personal.maritalStatus">
-            <?= $data['personal']['maritalStatus'] ?>
+            <?= $args['data']['personal']['maritalStatus'] ?>
           </td>
         </tr>
       </table>
     </div>
 
-    <?php if( is_file("users/$user/qr.png")): ?>
+    <?php if( is_file("users/$args[user]/qr.png")): ?>
       <div style="padding: 20px 0 5px 0;">
         Scan me
       </div>
       <div>
-        <img src="users/<?= $user ?>/qr.png" style="max-width: 200px;">
+        <img src="users/<?= $args['user'] ?>/qr.png" style="max-width: 200px;">
       </div>
     <?php endif; ?>
   </div>
@@ -112,31 +112,31 @@ extract($args);  // TASK
       </button>
     </div>
 
-    <?php if( ! empty( $data['personal']['logo'] )): ?>
+    <?php if( ! empty( $args['data']['personal']['logo'] )): ?>
       <div style="text-align: center;">
-        <img src="users/<?= $user ?>/<?= $data['personal']['logo'] ?>"  style="max-width: 150px;">
+        <img src="users/<?= $args['user'] ?>/<?= $args['data']['personal']['logo'] ?>"  style="max-width: 150px;">
       </div>
     <?php endif; ?>
     
     <section>
       <h2 data-caption="summary">
-        <?= $captions['summary'] ?>
+        <?= $args['captions']['summary'] ?>
       </h2>
       <p data-key="summary">
-        <?= $data['summary'] ?>
+        <?= $args['data']['summary'] ?>
       </p>
     </section>
 
     <section>
       <h2 data-caption="specialSkills">
-        <?= $captions['specialSkills'] ?>
+        <?= $args['captions']['specialSkills'] ?>
       </h2>
       <p>
-        <div class="collapsible" data-more="<?= $captions['readMore'] ?>" data-less="<?= $captions['less'] ?>">
+        <div class="collapsible" data-more="<?= $args['captions']['readMore'] ?>" data-less="<?= $args['captions']['less'] ?>">
           <div id="content" data-key="specialSkills" class="content collapsed">
-            <?= $data['specialSkills'] ?>
+            <?= $args['data']['specialSkills'] ?>
           </div>
-          <span id="readMore" class="read-more"><?= $captions['readMore'] ?></span>
+          <span id="readMore" class="read-more"><?= $args['captions']['readMore'] ?></span>
           <span class="info">
             <i class="bi bi-info-circle"></i> see online version at <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
           </span>
@@ -146,21 +146,21 @@ extract($args);  // TASK
     
     <section>
       <h2 data-caption="goals">
-        <?= $captions['goals'] ?>
+        <?= $args['captions']['goals'] ?>
       </h2>
       <div data-key="goals">  <!-- ul can't be inside p (html used in yml) -->
-        <?= $data['goals'] ?>
+        <?= $args['data']['goals'] ?>
       </div>
     </section>
     
     <section class="new-page">
       
       <h2 data-caption="experience">
-        <?= $captions['experience'] ?>
+        <?= $args['captions']['experience'] ?>
       </h2>
       
       <div class="timeline">
-        <?php foreach( $data['experience'] as $job): ?>
+        <?php foreach( $args['data']['experience'] as $job ): ?>
           <div class="experience-item" data-list="experience">
             <h3>
               <span class="date">
@@ -189,11 +189,11 @@ extract($args);  // TASK
     <section>
         
       <h2 data-caption="education">
-        <?= $captions['education'] ?>
+        <?= $args['captions']['education'] ?>
       </h2>
       
       <div class="timeline">
-        <?php foreach( $data['education'] as $edu): ?>
+        <?php foreach( $args['data']['education'] as $edu ): ?>
           <div class="education-item" data-list="education">
             <h3>
               <span class="date">
