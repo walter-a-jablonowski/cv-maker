@@ -53,7 +53,7 @@ skills:
 experience:
 
   - from:         06/2018
-    until:        Heute
+    until:        heute
     position:     Senior Full-Stack-Entwicklerin
     organisation: TechInnovate Inc., San Francisco
     summary:      Leitung der Entwicklung skalierbarer Webanwendungen

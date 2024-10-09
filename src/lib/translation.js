@@ -22,14 +22,16 @@ function transl(vars, attr, lang)
 
   // Lists
 
-  elems = document.querySelectorAll('[data-list]')
+  let lists = document.querySelectorAll('[data-list]')
+  let idx   = -1
 
-  elems.forEach( elem => {
-    elem.querySelectorAll(`[data-${attr}]`).forEach( elem => { translSetString(elem, vars, attr, lang) })
+  lists.forEach( list => {
+    idx++
+    list.querySelectorAll(`[data-${attr}]`).forEach( elem => { translSetString(elem, vars, attr, lang, idx) })
   })
 }
 
-function translSetString(elem, vars, attr, lang)
+function translSetString(elem, vars, attr, lang, idx = -1)
 {
   let value
 
@@ -38,11 +40,29 @@ function translSetString(elem, vars, attr, lang)
   else if( vars === 'data')
     value = data[lang]
 
-  const key = elem.getAttribute(`data-${attr}`).split('.')
+  if( elem.getAttribute(`data-${attr}`) === 'company' )
+    console.log('debug')
+
+  // Select the right list entry
+  // (TASK) improve this list handling a bit? at least we can have deeper nested lists
+
+  if( idx > -1 )
+  {
+    let list = elem.closest('[data-list]').dataset.list
+    
+    if( list in value )
+      value = value[list]
+    
+    if( Array.isArray(value) && idx < value.length)  // idx is in array = select list entry only for index lists (no captions)
+      value = value[idx]
+  }
+
+  let key = elem.getAttribute(`data-${attr}`).split('.')
 
   key.forEach( sub => {
     value = value[sub]
   })
+
   if( value )
     elem.innerHTML = value
 }
