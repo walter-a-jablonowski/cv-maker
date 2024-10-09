@@ -50,11 +50,10 @@
       </div>
     <?php endforeach; ?>
 
-    <!-- TASK: #captions -->
     <div class="lang-skills" data-list="languages" style="margin-top: 40px;">
-      <?php foreach( $data['skills']['lang'] as $language => $proficiency): ?>
+      <?php foreach( $data['skills']['lang'] as $lang => $level): ?>
         <span class="lang-skill">
-          <span data-caption="lang"><?= $language ?></span>: <span data-list="level"><?= $proficiency ?></span>
+          <span data-caption="<?= $lang ?>"><?= $captions[$lang] ?></span>: <span data-caption="<?= $level ?>"><?= $captions[$level] ?></span>
         </span>
       <?php endforeach; ?>
     </div>
