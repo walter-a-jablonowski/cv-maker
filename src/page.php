@@ -4,7 +4,7 @@ use Symfony\Component\Yaml\Yaml;
 use Symfony\Component\Yaml\Exception\ParseException;
 
 ?><!DOCTYPE html>
-<html lang="en">
+<html lang="<?= $args['lang'] ?>">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +12,22 @@ use Symfony\Component\Yaml\Exception\ParseException;
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
     <?php require "lib/tools_MOV.css"; ?>
-    <?php require "designs/$design/styles.css"; ?>
+    <?php require "designs/$args[design]/styles.css"; ?>
   </style>
 </head>
 <body>
 
-  <?php require "designs/$design/layout.php"; ?>
+  <?php
+  
+    print render("designs/$args[design]/layout.php", [
+      'user'     => $args['user'],
+      'design'   => $args['design'],
+      'lang'     => $args['lang'],
+      'data'     => $args['data'],
+      'captions' => $args['captions'],
+      'img'      => $args['img']
+    ]);
+  ?>
 
   <script>
     const captions = {
@@ -25,16 +35,16 @@ use Symfony\Component\Yaml\Exception\ParseException;
       'de': <?php echo json_encode( Yaml::parseFile("captions/de.yml")); ?>
     }
     const data = {
-      'en': <?php echo json_encode( Yaml::parseFile("users/$user/cv_en.yml")); ?>,
-      'de': <?php echo json_encode( Yaml::parseFile("users/$user/cv_de.yml")); ?>
+      'en': <?php echo json_encode( Yaml::parseFile("users/$args[user]/cv_en.yml")); ?>,
+      'de': <?php echo json_encode( Yaml::parseFile("users/$args[user]/cv_de.yml")); ?>
     }
   </script>
   <script>
   
     <?php require 'lib/translation.js'; ?>
   
-    <?php if( is_file("designs/$design/controller.js")): ?>
-      <?php require "designs/$design/controller.js"; ?>
+    <?php if( is_file("designs/$args[design]/controller.js")): ?>
+      <?php require "designs/$args[design]/controller.js"; ?>
     <?php endif; ?>
   </script>
 </body>

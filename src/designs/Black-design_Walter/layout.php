@@ -1,4 +1,8 @@
-<div class="container">
+<?php
+
+extract($args);  // TASK
+
+?><div class="container">
   <div class="sidebar">
     
     <img src="<?= $img ?>" class="profile-img" style="max-width: 200px;">
