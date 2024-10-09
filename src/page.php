@@ -19,7 +19,7 @@ use Symfony\Component\Yaml\Exception\ParseException;
 
   <?php
   
-    print render("designs/$args[design]/layout.php", [
+    print render("designs/$args[design]/layout.php", /* $args */ [
       'user'     => $args['user'],
       'lang'     => $args['lang'],
       'data'     => $args['data'],

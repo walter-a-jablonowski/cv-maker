@@ -14,11 +14,9 @@ $design  = $_GET['design'] ?? 'Black-design_Walter';
 $lang    = $_GET['lang']   ?? 'en';
 
 $data     = Yaml::parseFile("users/$user/cv_$lang.yml");
-// $data  = new SimpleData( Yaml::parseFile("users/$user/cv_$lang.yml"));
 $captions = Yaml::parseFile("captions/$lang.yml");
-// $data  = new SimpleData( Yaml::parseFile("captions/$lang.yml"));
 
-$html = render('page.php', [
+$html = render('page.php', /* new SimpleData( */ [
   'user'     => $user,
   'design'   => $design,
   'lang'     => $lang,
@@ -33,7 +31,7 @@ copy("users/$user/img.png", "users/$user/public/img.png");
 if( is_file("users/$user/qr.png"))
   copy("users/$user/qr.png", "users/$user/public/qr.png");
 
-echo render('page.php', [
+echo render('page.php', /* new SimpleData( */ [
   'user'     => $user,
   'design'   => $design,
   'lang'     => $lang,

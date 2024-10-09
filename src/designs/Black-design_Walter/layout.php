@@ -8,7 +8,9 @@
     <img src="<?= $args['img'] ?>" class="profile-img" style="max-width: 200px;">
     
     <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
-      <?= $args['data']['personal']['name'] ?>
+      <?=    $args['data']['personal']['name']
+          // $args->get('data.personal.name')
+      ?>
     </h1>
     
     <?php if( ! empty( $args['data']['personal']['summary'] )): ?>
