@@ -23,7 +23,7 @@ function transl(vars, attr, lang)
   // Lists
 
   let lists = document.querySelectorAll('[data-list]')
-  let idx   = -1
+  let idx   = -1  // idx of list entry for data lists
 
   lists.forEach( list => {
     idx++
@@ -40,8 +40,8 @@ function translSetString(elem, vars, attr, lang, idx = -1)
   else if( vars === 'data')
     value = data[lang]
 
-  if( elem.getAttribute(`data-${attr}`) === 'company' )
-    console.log('debug')
+  // if( elem.getAttribute(`data-${attr}`) === 'company' )
+  //   console.log('debug')
 
   // Select the right list entry
   // (TASK) improve this list handling a bit? at least we can have deeper nested lists
@@ -57,12 +57,9 @@ function translSetString(elem, vars, attr, lang, idx = -1)
       value = value[idx]
   }
 
-  let key = elem.getAttribute(`data-${attr}`).split('.')
-
-  key.forEach( sub => {
+  elem.getAttribute(`data-${attr}`).split('.').forEach( sub => {
     value = value[sub]
   })
 
-  if( value )
-    elem.innerHTML = value
+  elem.innerHTML = value
 }
