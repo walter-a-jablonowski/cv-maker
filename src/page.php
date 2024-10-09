@@ -21,7 +21,6 @@ use Symfony\Component\Yaml\Exception\ParseException;
   
     print render("designs/$args[design]/layout.php", [
       'user'     => $args['user'],
-      'design'   => $args['design'],
       'lang'     => $args['lang'],
       'data'     => $args['data'],
       'captions' => $args['captions'],

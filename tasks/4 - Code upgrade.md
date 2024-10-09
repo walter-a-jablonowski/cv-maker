@@ -9,3 +9,4 @@ Code
   - state of the art html structure and styles
 - [ ] Use lib func js
 - [ ] Static class for translation
+- [ ] SimpleData
