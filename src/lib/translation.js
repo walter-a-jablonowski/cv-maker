@@ -1,28 +1,5 @@
 function translate(lang)
 {
-/*
-  // let elems = document.querySelectorAll('[data-caption]')
-  let elems = document.querySelectorAll('[data-caption]:not([data-list] [data-caption])')
-
-  elems.forEach( elem => {
-    const key = elem.getAttribute('data-caption')
-    if( captions[lang][key])
-      elem.textContent = captions[lang][key]
-  })
-  
-  // elems = document.querySelectorAll('[data-key]')
-  elems = document.querySelectorAll('[data-key]:not([data-list] [data-key])')
-
-  elems.forEach( elem => {
-    const key   = elem.getAttribute('data-key').split('.')
-    let   value = data[lang]
-    key.forEach( sub => {
-      value = value[sub]
-    })
-    if( value )
-      elem.innerHTML = value
-  })
-*/
   transl('captions', 'caption', lang)
   transl('data', 'key', lang)
 }
@@ -36,7 +13,6 @@ function transl(vars, attr, lang)
 {
   // Single elems
 
-  // let elems = document.querySelectorAll(`[data-${attr}]`)
   let elems = document.querySelectorAll(`[data-${attr}]:not([data-list] [data-${attr}])`)
   // elems = document.querySelectorAll(`[data-${attr}]`).filter( elem => {
   //   return ! elem.closest('[data-list]')
