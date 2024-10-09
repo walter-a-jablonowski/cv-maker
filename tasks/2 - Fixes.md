@@ -1,4 +1,5 @@
 
+- [ ] There is an problem with idx in list tranlation
 - [ ] Shorten the mail
 - [ ] new QR code
 - [ ] move commonly used code from designs
