@@ -19,20 +19,23 @@ use Symfony\Component\Yaml\Exception\ParseException;
 
   <?php require "designs/$design/layout.php"; ?>
 
-  <?php if( is_file("designs/$design/controller.js")): ?>
-    <script>
+  <script>
+    const captions = {
+      'en': <?php echo json_encode( Yaml::parseFile("captions/en.yml")); ?>,
+      'de': <?php echo json_encode( Yaml::parseFile("captions/de.yml")); ?>
+    }
+    const data = {
+      'en': <?php echo json_encode( Yaml::parseFile("users/$user/cv_en.yml")); ?>,
+      'de': <?php echo json_encode( Yaml::parseFile("users/$user/cv_de.yml")); ?>
+    }
+  </script>
+  <script>
+  
+    <?php require 'lib/translation.js'; ?>
+  
+    <?php if( is_file("designs/$design/controller.js")): ?>
       <?php require "designs/$design/controller.js"; ?>
-    </script>
-  <?php endif; ?>
-<script>
-  const captions = {
-    'en': <?php echo json_encode( Yaml::parseFile("captions/en.yml")); ?>,
-    'de': <?php echo json_encode( Yaml::parseFile("captions/de.yml")); ?>
-  }
-  const data = {
-    'en': <?php echo json_encode( Yaml::parseFile("users/$user/cv_en.yml")); ?>,
-    'de': <?php echo json_encode( Yaml::parseFile("users/$user/cv_de.yml")); ?>
-  }
-</script>
+    <?php endif; ?>
+  </script>
 </body>
 </html>

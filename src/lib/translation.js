@@ -23,8 +23,8 @@ function translate(lang)
       elem.innerHTML = value
   })
 */
-  transl('captions', lang)
-  transl('data', lang)
+  transl('captions', 'caption', lang)
+  transl('data', 'key', lang)
 }
 
 /*
@@ -32,31 +32,38 @@ function translate(lang)
 Modify texts for single values or list of values
 
 */
-function transl(name, lang)
+function transl(vars, attr, lang)
 {
   // Single elems
 
-  // let elems = document.querySelectorAll(`[data-${name}]`)
-  let elems = document.querySelectorAll(`[data-${name}]:not([data-list] [data-${name}])`)
-  // elems = document.querySelectorAll(`[data-${name}]`).filter( elem => {
+  // let elems = document.querySelectorAll(`[data-${attr}]`)
+  let elems = document.querySelectorAll(`[data-${attr}]:not([data-list] [data-${attr}])`)
+  // elems = document.querySelectorAll(`[data-${attr}]`).filter( elem => {
   //   return ! elem.closest('[data-list]')
   // })
 
-  elems.forEach( elem => { translSetString(elem, name, lang) })
+  elems.forEach( elem => { translSetString(elem, vars, attr, lang) })
 
   // Lists
 
   elems = document.querySelectorAll('[data-list]')
 
   elems.forEach( elem => {
-    elem.querySelectorAll(`[data-${name}]`).forEach( elem => { translSetString(elem, name, lang) })
+    elem.querySelectorAll(`[data-${attr}]`).forEach( elem => { translSetString(elem, vars, attr, lang) })
   })
 }
 
-function translSetString(elem, name, lang)
+function translSetString(elem, vars, attr, lang)
 {
-  const key   = elem.getAttribute(`data-${name}`).split('.')
-  let   value = window[name][lang]
+  let value
+
+  if( vars === 'captions')
+    value = captions[lang]
+  else if( vars === 'data')
+    value = data[lang]
+
+  const key = elem.getAttribute(`data-${attr}`).split('.')
+
   key.forEach( sub => {
     value = value[sub]
   })
