@@ -7,7 +7,7 @@ German version via AI (make yml and add placeholders)
   - works when html in yml replaces by a string
   - wrong rendering by chrome when html (makes no sense)
   - any bad chars?
-- [ ] also provide data in js version
-  - [ ] problem: experience and edu lists
-  - [ ] list captions for lang see #captions
+- [x] also provide data in js version
+  - [x] problem: experience and edu lists
+  - [x] list captions for lang see #captions
 - [ ] captions read more
