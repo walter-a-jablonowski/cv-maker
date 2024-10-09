@@ -54,7 +54,7 @@
     <div class="lang-skills" data-list="languages" style="margin-top: 40px;">
       <?php foreach( $data['skills']['lang'] as $language => $proficiency): ?>
         <span class="lang-skill">
-          <span data-lcaption="lang"><?= $language ?></span>: <span data-list="level"><?= $proficiency ?></span>
+          <span data-caption="lang"><?= $language ?></span>: <span data-list="level"><?= $proficiency ?></span>
         </span>
       <?php endforeach; ?>
     </div>
