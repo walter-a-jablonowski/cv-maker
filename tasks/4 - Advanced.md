@@ -12,5 +12,7 @@ Fixes & code style
 
 - [ ] Some solution for a top padding per page within the bars?
 - [ ] fix top bar with a dropdown to switch designs
+
+- [ ] Maybe improve the translations list handling code a bit (see comment)
 - [ ] Clean up some of the AI generated styles an page struct (or use AI to improve it)
   - state of the art html structure and styles
