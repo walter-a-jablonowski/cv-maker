@@ -1,0 +1,23 @@
+.collapsible {
+  position: relative;
+}
+
+.content {
+  overflow:   hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.content.collapsed {
+  max-height: 5.1em;
+}
+
+.more-btn {
+  color:    blue;
+  cursor:     pointer;
+  display:    inline-block;
+  margin-top: 5px;
+}
+
+.more-btn:hover {
+  text-decoration: none;
+}

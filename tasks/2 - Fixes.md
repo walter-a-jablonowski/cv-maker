@@ -1,8 +1,8 @@
 
-left over: read more, qr
 
 - [x] Shorten the mail
 - [x] new QR code
+- [x] left over: read more, qr
 - [ ] maybe add some AI generated toast that tells the user to set print paddings to 0
 - [ ] move commonly used code from designs
 - [ ] Make sidebar fully black h 100 in print layout

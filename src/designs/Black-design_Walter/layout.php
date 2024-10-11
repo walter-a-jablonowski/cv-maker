@@ -130,11 +130,13 @@
         <?= $args['captions']['specialSkills'] ?>
       </h2>
       <p>
-        <div class="collapsible" data-more="<?= $args['captions']['readMore'] ?>" data-less="<?= $args['captions']['less'] ?>">
-          <div id="content" data-key="specialSkills" class="content collapsed">
+        <!-- collapsible -->
+        <div class="collapsible">
+          <div data-key="specialSkills" class="content collapsed">
             <?= $args['data']['specialSkills'] ?>
           </div>
-          <span id="readMore" class="read-more"><?= $args['captions']['readMore'] ?></span>
+          <span class="more-btn" data-caption="readMore">Read more ...</span>
+          <!-- special elem -->
           <span class="info">
             <i class="bi bi-info-circle"></i> see online version at <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
           </span>

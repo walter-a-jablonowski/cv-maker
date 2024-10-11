@@ -4,7 +4,7 @@
 
 Code
 
-- [ ] Move collapse in a small crl
+- [x] Move collapse in a small crl
 - [ ] Clean up some of the AI generated styles an page struct (or use AI to improve it)
   - state of the art html structure and styles
 - [ ] Use lib func js

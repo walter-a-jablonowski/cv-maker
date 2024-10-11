@@ -43,21 +43,3 @@ function toggleLanguage()
     langBtn.querySelector('img').src = 'https://flagcdn.com/w20/us.png'
   }
 }
-
-const content  = document.getElementById('content')
-const readMore = document.getElementById('readMore')
-
-readMore.addEventListener('click', function() {
-  
-  if( content.classList.contains('collapsed'))
-  {
-    content.classList.remove('collapsed')
-    // readMore.textContent = 'Less'
-    readMore.textContent = readMore.closest('.collapsible').dataset.less
-  }
-  else {
-    content.classList.add('collapsed')
-    // readMore.textContent = 'Read more ...'
-    readMore.textContent = readMore.closest('.collapsible').dataset.more
-  }
-})

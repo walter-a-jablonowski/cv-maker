@@ -11,6 +11,7 @@ use Symfony\Component\Yaml\Exception\ParseException;
   <title>Resume</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <style>
+    <?php require "lib/collapsible/style.css"; ?>
     <?php require "lib/tools_MOV.css"; ?>
     <?php require "designs/$args[design]/styles.css"; ?>
   </style>
@@ -41,6 +42,7 @@ use Symfony\Component\Yaml\Exception\ParseException;
   <script>
   
     <?php require 'lib/objects_MOV.js'; ?>
+    <?php require 'lib/collapsible/controller.js'; ?>
     <?php require 'lib/translation.js'; ?>
   
     <?php if( is_file("designs/$args[design]/controller.js")): ?>
