@@ -17,6 +17,11 @@ window.addEventListener('load',   adjustFontSize)
 window.addEventListener('resize', adjustFontSize)
 */
 
+function printCV()
+{
+  window.print()
+}
+
 function toggleLanguage()
 {
   const langBtn = document.getElementById('langBtn')

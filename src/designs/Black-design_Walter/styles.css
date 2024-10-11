@@ -84,12 +84,12 @@ h1, h2 {
 
 .profile-img {
   width:         150px;
-  /*
+/*
   height: 150px;
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--accent-color);
-  */
+*/
   margin-top:    0.15rem;
   margin-bottom: 0.25rem;
 }
@@ -254,6 +254,12 @@ h1, h2 {
 }
 
 /* Print */
+
+@page {
+  size: A4 portrait;  /* TASK: there seems to be no seeting that removes the printed page paddings */
+  margin:  0;
+  padding: 0;
+}
 
 @media print {
   

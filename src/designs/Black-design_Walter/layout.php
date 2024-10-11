@@ -102,7 +102,7 @@
   <div class="main-content">
 
     <div class="action-buttons">
-      <button id="printBtn" class="btn btn-action" onclick="window.print()">
+      <button id="printBtn" class="btn btn-action" onclick="printCV()">
         <i class="bi bi-printer"></i>
       </button>
       <button id="langBtn"  class="btn btn-action lang-en" onclick="toggleLanguage()">
