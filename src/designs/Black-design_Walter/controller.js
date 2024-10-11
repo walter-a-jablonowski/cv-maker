@@ -30,7 +30,6 @@ function toggleLanguage()
   {
     translate('de')
     
-    document.documentElement.lang = 'de'
     langBtn.classList.remove('lang-en')
     langBtn.classList.add('lang-de')
     langBtn.querySelector('img').src = 'https://flagcdn.com/w20/de.png'
@@ -39,7 +38,6 @@ function toggleLanguage()
   {
     translate('en')
     
-    document.documentElement.lang = 'en'
     langBtn.classList.remove('lang-de')
     langBtn.classList.add('lang-en')
     langBtn.querySelector('img').src = 'https://flagcdn.com/w20/us.png'

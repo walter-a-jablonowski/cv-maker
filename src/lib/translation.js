@@ -19,10 +19,14 @@ function translate( lang )
   })
   
   // Data lists
-
+  
   let lists = document.querySelectorAll('[data-list]')
-
+  
   lists.forEach( list => { translate_recurse( list, lang ) })
+
+  // Lang attribute
+
+  document.documentElement.lang = lang
 }
 
 function translate_recurse( list, lang )
