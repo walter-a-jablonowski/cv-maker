@@ -76,6 +76,7 @@ education:
     until:       05/2012
     institution: Tech University of America
     degree:      Bachelor of Science in Informatik
+    # summary:
 
   - from:        09/2004
     until:       06/2008
