@@ -1,6 +1,6 @@
 
 - [ ] render function
-- [ ] Maybe improve the translations list handling code a bit (see comment)
+- [x] Maybe improve the translations list handling code a bit (see comment)
 
 Code
 

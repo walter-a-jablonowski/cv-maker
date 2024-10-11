@@ -13,7 +13,7 @@ Add stunning interactive elems for the web version
   - [ ] Advanced
     - web: below
     - print: end of pg 2
-- [ ] Some hori line thing besode Logo or grdient (maybe)
+- [ ] maybe some hori line thing besode Logo or grdient (maybe)
 
 ```
 Make a stunning web developer logo based on `</>`. Be creative, make it great looking.
