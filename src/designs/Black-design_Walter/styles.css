@@ -256,7 +256,7 @@ h1, h2 {
 /* Print */
 
 @page {
-  size: A4 portrait;  /* TASK: there seems to be no seeting that removes the printed page paddings */
+  size: A4 portrait;  /* TASK: there seems to be no setting that removes the printed page paddings */
   margin:  0;
   padding: 0;
 }

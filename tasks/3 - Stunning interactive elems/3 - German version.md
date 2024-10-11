@@ -11,3 +11,10 @@ German version via AI (make yml and add placeholders)
   - [x] problem: experience and edu lists
   - [x] list captions for lang see #captions
 - [ ] captions read more
+
+- [x] Simplify lang
+  - keys must be like captions, value is data (prefer)
+    - in advanced UI we could use some dropdown for langs
+  - or all is data (maybe better cause user doesn't know about captions)
+- [x] There is an problem with idx in list tranlation
+  - use idx in html

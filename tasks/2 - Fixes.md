@@ -1,12 +1,7 @@
 
-- [ ] Simplify lang
-  - keys must be like captions, value is data (prefer)
-    - in advanced UI we could use some dropdown for langs
-  - or all is data (maybe better cause user doesn't know about captions)
-- [ ] There is an problem with idx in list tranlation
-  - use idx in html
 - [ ] Shorten the mail
 - [ ] new QR code
+- [ ] maybe add some AI generated toast that tells the user to set print paddings to 0
 - [ ] move commonly used code from designs
 - [ ] Make sidebar fully black h 100 in print layout
 
