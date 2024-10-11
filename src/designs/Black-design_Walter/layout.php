@@ -52,10 +52,10 @@
       </div>
     <?php endforeach; ?>
 
-    <div class="lang-skills" data-list="skills.lang" style="margin-top: 40px;">
+    <div class="lang-skills" style="margin-top: 40px;">
       <?php foreach( $args['data']['skills']['lang'] as $lang => $level ): ?>
         <span class="lang-skill">
-          <span data-caption="<?= $lang ?>"><?= $args['captions'][$lang] ?></span>: <span data-key="<?= $lang ?>"><?= $level ?></span>
+          <span data-caption="<?= $lang ?>"><?= $args['captions'][$lang] ?></span>: <span data-key="skills.lang.<?= $lang ?>"><?= $level ?></span>
         </span>
       <?php endforeach; ?>
     </div>

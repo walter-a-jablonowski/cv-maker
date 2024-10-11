@@ -9,16 +9,12 @@ function translate( lang )
 
   // Single data values
 
-  let elems = document.querySelectorAll(`[data-key]:not([data-list] [data-key])`)
+  let elems = document.querySelectorAll(`[data-key]:not([data-list] [data-key])`)  // TASK: (advanced) recurse (see also below) :not([data-list] [data-list]
   // elems = document.querySelectorAll(`[data-key]`).filter( elem => {
   //   return ! elem.closest('[data-list]')
   // })
 
   elems.forEach( elem => { 
-    
-    if( elem.dataset.key === 'summary')
-      console.log('debug')
-
     elem.innerHTML = findKey( data[lang], elem.dataset.key)
   })
   
@@ -31,6 +27,9 @@ function translate( lang )
 
 function translate_recurse( list, lang )
 {
+  if( list.dataset.list === 'skills.lang')
+    console.log('debug')
+
   let value = findKey( data[lang], list.dataset.list )  // TASK: func has undefined (currently makes no difference)
   
   list.querySelectorAll(`[data-idx]`).forEach( idx => {
