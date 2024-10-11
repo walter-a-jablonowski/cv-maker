@@ -1,4 +1,6 @@
 
+left over: read more, qr
+
 - [x] Shorten the mail
 - [ ] new QR code
 - [ ] maybe add some AI generated toast that tells the user to set print paddings to 0
