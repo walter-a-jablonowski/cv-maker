@@ -27,9 +27,6 @@ function translate( lang )
 
 function translate_recurse( list, lang )
 {
-  if( list.dataset.list === 'skills.lang')
-    console.log('debug')
-
   let value = findKey( data[lang], list.dataset.list )  // TASK: func has undefined (currently makes no difference)
   
   list.querySelectorAll(`[data-idx]`).forEach( idx => {
