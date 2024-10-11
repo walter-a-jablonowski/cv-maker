@@ -47,7 +47,7 @@ skills:
     MongoDB:     85
     GraphQL:     70
   lang:
-    English:  native          # must be caption keys
+    English:  native          # key must be caption keys
     Spanish:  conversational
 
 experience:

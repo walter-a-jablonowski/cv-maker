@@ -1,8 +1,4 @@
-<?php
-
-// extract($args);
-
-?><div class="container">
+<div class="container">
   <div class="sidebar">
     
     <img src="<?= $args['img'] ?>" class="profile-img" style="max-width: 200px;">
@@ -56,10 +52,10 @@
       </div>
     <?php endforeach; ?>
 
-    <div class="lang-skills" data-list="languages" style="margin-top: 40px;">
+    <div class="lang-skills" data-list="skills.lang" style="margin-top: 40px;">
       <?php foreach( $args['data']['skills']['lang'] as $lang => $level ): ?>
         <span class="lang-skill">
-          <span data-caption="<?= $lang ?>"><?= $args['captions'][$lang] ?></span>: <span data-caption="<?= $level ?>"><?= $args['captions'][$level] ?></span>
+          <span data-caption="<?= $lang ?>"><?= $args['captions'][$lang] ?></span>: <span data-key="<?= $level ?>"><?= $level ?></span>
         </span>
       <?php endforeach; ?>
     </div>
@@ -161,9 +157,9 @@
         <?= $args['captions']['experience'] ?>
       </h2>
       
-      <div class="timeline">
-        <?php foreach( $args['data']['experience'] as $job ): ?>
-          <div class="experience-item" data-list="experience">
+      <div class="timeline" data-list="experience">
+        <?php foreach( $args['data']['experience'] as $idx => $job ): ?>
+          <div class="experience-item" data-idx="<?= $idx ?>">
             <h3>
               <span class="date">
                 <span data-key="from"><?= $job['from'] ?></span> - <span data-key="until"><?= $job['until'] ?></span>
@@ -194,9 +190,9 @@
         <?= $args['captions']['education'] ?>
       </h2>
       
-      <div class="timeline">
-        <?php foreach( $args['data']['education'] as $edu ): ?>
-          <div class="education-item" data-list="education">
+      <div class="timeline" data-list="education">
+        <?php foreach( $args['data']['education'] as $idx => $edu ): ?>
+          <div class="education-item" data-idx="<?= $idx ?>">
             <h3>
               <span class="date">
                 <span data-key="from"><?= $edu['from'] ?></span> - <span data-key="until"><?= $edu['until'] ?></span>

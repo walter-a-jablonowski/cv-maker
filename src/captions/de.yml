@@ -2,9 +2,9 @@ German:  Deutsch
 English: Englisch
 Spanish: Spanisch
 
-native:  Muttersprache
-fluent:  fließend
-conversational: Konversationsniveau
+# native:  Muttersprache
+# fluent:  fließend
+# conversational: Konversationsniveau
 
 born:          "Geburtsdatum"
 nationality:   "Nationalität"

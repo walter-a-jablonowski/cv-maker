@@ -1,50 +1,54 @@
-function translate(lang)
+function translate( lang )
 {
-  transl('captions', 'caption', lang)  // TASK: maybe we don't really need captions as list
-  // document.querySelectorAll(`[data-caption]`)
-  // elems.forEach( elem => { translSetString(elem, vars, attr, lang) })
-  transl('data', 'key', lang)
+  // Captions
+  
+  document.querySelectorAll(`[data-caption]`).forEach( elem => {
+    // we don't really need list captions, just replace the strings
+    elem.innerHTML = captions[lang][elem.dataset.caption]
+  })
+
+  // Single data values
+
+  let elems = document.querySelectorAll(`[data-key]:not([data-list] [data-key])`)
+  // elems = document.querySelectorAll(`[data-key]`).filter( elem => {
+  //   return ! elem.closest('[data-list]')
+  // })
+
+  elems.forEach( elem => { 
+    elem.innerHTML = data[lang][ findKey(data, elem.dataset.key) ]
+  })
+  
+  // Data lists
+
+  let lists = document.querySelectorAll('[data-list]')
+
+  lists.forEach( list => { translate_recurse( list, lang ) })
+}
+
+function translate_recurse( list, lang )
+{
+  let value = findKey( data[lang], list.dataset.list )  // TASK: func has undefined
+  
+  list.querySelectorAll(`[data-idx]`).forEach( idx => {
+    
+    let val = value[idx.dataset.idx]
+
+    idx.querySelectorAll(`[data-key]`).forEach( entry => {
+      entry.innerHTML = findKey( val, entry.dataset.key)
+    })
+  })
+  
+  // TASK: (advanced) nestend lists
+
+  // list.querySelectorAll(`[data-list]:not([data-list] [data-list]`).forEach( subList => {
+  //   translate_recurse( subList, lang )
+  // })
 }
 
 /*
 
-Modify texts for single values or list of values
-
-*/
-function transl(vars, attr, lang)
-{
-  // Single elems
-
-  let elems = document.querySelectorAll(`[data-${attr}]:not([data-list] [data-${attr}])`)
-  // elems = document.querySelectorAll(`[data-${attr}]`).filter( elem => {
-  //   return ! elem.closest('[data-list]')
-  // })
-
-  elems.forEach( elem => { translSetString(elem, vars, attr, lang) })
-
-  // Lists
-
-  let lists = document.querySelectorAll('[data-list]')
-  let idx   = -1  // idx of list entry for data lists
-
-  lists.forEach( list => {
-    idx++
-    list.querySelectorAll(`[data-${attr}]`).forEach( elem => { translSetString(elem, vars, attr, lang, idx) })
-  })
-}
-
 function translSetString(elem, vars, attr, lang, idx = -1)
 {
-  let value
-
-  if( vars === 'captions')
-    value = captions[lang]
-  else if( vars === 'data')
-    value = data[lang]
-
-  // if( elem.getAttribute(`data-${attr}`) === 'company' )
-  //   console.log('debug')
-
   // Select the right list entry
   // (TASK) improve this list handling a bit? at least we can have deeper nested lists
 
@@ -58,10 +62,6 @@ function translSetString(elem, vars, attr, lang, idx = -1)
     if( Array.isArray(value) && idx < value.length)  // idx is in array = select list entry only for index lists (no captions)
       value = value[idx]
   }
-
-  elem.getAttribute(`data-${attr}`).split('.').forEach( sub => {
-    value = value[sub]
-  })
-
-  elem.innerHTML = value
 }
+
+*/

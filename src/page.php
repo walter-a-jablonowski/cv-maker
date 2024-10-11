@@ -40,6 +40,7 @@ use Symfony\Component\Yaml\Exception\ParseException;
   </script>
   <script>
   
+    <?php require 'lib/objects_MOV.js'; ?>
     <?php require 'lib/translation.js'; ?>
   
     <?php if( is_file("designs/$args[design]/controller.js")): ?>
