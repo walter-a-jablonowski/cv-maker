@@ -7,22 +7,21 @@ document.querySelectorAll('.collapsible').forEach( elem => {
 
     const btn = elem.querySelector('.more-btn')
     const content = elem.querySelector('.content')
+    const lang = document.documentElement.lang
 
     if( content.classList.contains('collapsed'))
     {
       content.classList.remove('collapsed')
-      // readMore.textContent = readMore.closest('.collapsible').dataset.less
+      btn.dataset.caption = 'collapsible.less'
       // btn.textContent = less[ document.documentElement.lang ]
-      btn.dataset.caption = 'less'
-      btn.textContent = captions[ document.documentElement.lang ]['less']  // TASK: depends on captions, improve
+      btn.textContent = JSON.parse( btn.closest('.collapsible').dataset.captions)[lang].less
     }
     else
     {
       content.classList.add('collapsed')
-      // readMore.textContent = readMore.closest('.collapsible').dataset.more
+      btn.dataset.caption = 'collapsible.readMore'
       // btn.textContent = more[ document.documentElement.lang ]
-      btn.dataset.caption = 'readMore'
-      btn.textContent = captions[ document.documentElement.lang ]['readMore']
+      btn.textContent = JSON.parse( btn.closest('.collapsible').dataset.captions)[lang].readMore
     }
   })
 })

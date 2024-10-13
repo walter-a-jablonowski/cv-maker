@@ -13,8 +13,10 @@ function adjustFontSize()
   }
 }
 
-window.addEventListener('load',   adjustFontSize)
-window.addEventListener('resize', adjustFontSize)
+ready( function() {
+  window.addEventListener('load',   adjustFontSize)
+  window.addEventListener('resize', adjustFontSize)
+})
 */
 
 function printCV()
@@ -32,7 +34,7 @@ function toggleLanguage()
     
     langBtn.classList.remove('lang-en')
     langBtn.classList.add('lang-de')
-    langBtn.querySelector('img').src = 'https://flagcdn.com/w20/de.png'
+    langBtn.querySelector('img').src = 'https://flagcdn.com/w20/de.png'  // TASK: local
   }
   else
   {

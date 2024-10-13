@@ -131,11 +131,11 @@
       </h2>
       <p>
         <!-- collapsible -->
-        <div class="collapsible">
+         <div class="collapsible" data-captions="<?= htmlspecialchars( json_encode( $args['collapsibleCaptions'])) ?>">
           <div data-key="specialSkills" class="content collapsed">
             <?= $args['data']['specialSkills'] ?>
           </div>
-          <span class="more-btn" data-caption="readMore">Read more ...</span>
+          <span class="more-btn" data-caption="collapsible.readMore">Read more ...</span>
           <!-- special elem -->
           <span class="info">
             <i class="bi bi-info-circle"></i> see online version at <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>

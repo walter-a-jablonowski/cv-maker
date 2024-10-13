@@ -25,6 +25,7 @@ use Symfony\Component\Yaml\Exception\ParseException;
       'lang'     => $args['lang'],
       'data'     => $args['data'],
       'captions' => $args['captions'],
+      'collapsibleCaptions' => $args['collapsibleCaptions'],
       'img'      => $args['img']
     ]);
   ?>

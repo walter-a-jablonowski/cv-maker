@@ -16,12 +16,22 @@ $lang   = $_GET['lang']   ?? 'en';
 $data     = Yaml::parseFile("users/$user/cv_$lang.yml");
 $captions = Yaml::parseFile("captions/$lang.yml");
 
+$collapsibleCaptions = [];
+
+foreach( scandir('captions') as $fil )
+{
+  if( pathinfo($fil, PATHINFO_EXTENSION) !== 'yml')  continue;
+  $lang = pathinfo($fil, PATHINFO_FILENAME);
+  $collapsibleCaptions[$lang] = Yaml::parseFile("captions/$fil")['collapsible'];
+}
+
 $html = render('page.php', /* new SimpleData( */ [
   'user'     => $user,
   'design'   => $design,
   'lang'     => $lang,
   'data'     => $data,
   'captions' => $captions,
+  'collapsibleCaptions' => $collapsibleCaptions,
   'img'      => "users/$user/img.png"
 ]);
 
@@ -29,7 +39,7 @@ file_put_contents("users/$user/public/cv.html", $html);
 copy("users/$user/img.png", "users/$user/public/img.png");
 
 if( is_file("users/$user/qr.png"))
-  copy("users/$user/qr.png", "users/$user/public/qr.png");
+copy("users/$user/qr.png", "users/$user/public/qr.png");
 
 echo render('page.php', /* new SimpleData( */ [
   'user'     => $user,
@@ -37,6 +47,7 @@ echo render('page.php', /* new SimpleData( */ [
   'lang'     => $lang,
   'data'     => $data,
   'captions' => $captions,
+  'collapsibleCaptions' => $collapsibleCaptions,
   'img' => "users/$user/img.png"
 ]);
 

@@ -1,10 +1,6 @@
-German:  Deutsch
-English: Englisch
-Spanish: Spanisch
-
-# native:  Muttersprache
-# fluent:  fließend
-# conversational: Konversationsniveau
+German:        "Deutsch"
+English:       "Englisch"
+Spanish:       "Spanisch"
 
 born:          "Geburtsdatum"
 nationality:   "Nationalität"
@@ -17,5 +13,6 @@ company:       "Firma"
 education:     "Ausbildung"
 degree:        "Abschluss"
 
-readMore:      "Mehr ..."
-less:          "weniger zeigen"
+collapsible:
+  readMore:    "Mehr ..."
+  less:        "weniger zeigen"

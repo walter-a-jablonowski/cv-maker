@@ -1,10 +1,6 @@
-German:  German
-English: English
-Spanish: Spanish
-
-# native:  Native
-# fluent:  Fluent
-# conversational: Conversational
+German:        "German"
+English:       "English"
+Spanish:       "Spanish"
 
 born:          "Born"
 nationality:   "Nationality"
@@ -17,5 +13,6 @@ company:       "Company"
 education:     "Education"
 degree:        "Degree"
 
-readMore:      "Read more ..."
-less:          "less"
+collapsible:
+  readMore:    "Read more ..."
+  less:        "less"

@@ -4,7 +4,7 @@ function translate( lang )
   
   document.querySelectorAll(`[data-caption]`).forEach( elem => {
     // we don't really need list captions, just replace the strings
-    elem.innerHTML = captions[lang][elem.dataset.caption]
+    elem.innerHTML = findKey( captions[lang], elem.dataset.caption)
   })
 
   // Single data values
