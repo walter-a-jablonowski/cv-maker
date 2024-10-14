@@ -1,4 +1,7 @@
 /*
+
+// Font width of long name
+
 function adjustFontSize()
 {
   const container = document.querySelector('#name')
@@ -17,6 +20,7 @@ ready( function() {
   window.addEventListener('load',   adjustFontSize)
   window.addEventListener('resize', adjustFontSize)
 })
+
 */
 
 function printCV()
