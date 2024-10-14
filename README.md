@@ -14,7 +14,7 @@ Currently minimal version for personal use
 LICENSE
 ----------------------------------------------------------
 
-Copyright (C) Walter A. Jablonowski 2024, free for non-commercial users currently under MIT [License](https://choosealicense.com/licenses/agpl-3.0)
+Copyright (C) Walter A. Jablonowski 2024, free for non-commercial use currently under MIT [License](https://choosealicense.com/licenses/agpl-3.0)
 
 This app is build upon PHP and free software (see [credits](credits.md)).
 
