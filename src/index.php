@@ -8,8 +8,8 @@ require 'lib/render_241008.php';
 // require 'lib/SimpleData_240317.php';
 
 
-$user   = 'Walter';
-// $user = 'Demo';
+// $user = 'Walter';
+$user = 'Demo';
 $design = $_GET['design'] ?? 'Black-design_Walter';
 $lang   = $_GET['lang']   ?? 'en';
 
@@ -25,12 +25,12 @@ foreach( scandir('captions') as $fil )
   $collapsibleCaptions[$lng] = Yaml::parseFile("captions/$fil")['collapsible'];
 }
 
-$html = render('page.php', /* new SimpleData( */ [
+$html = render('page.php', [
   'user'     => $user,
   'design'   => $design,
   'lang'     => $lang,
-  'data'     => $data,
-  'captions' => $captions,
+  'data'     => /* new SimpleData( */ $data,  // use extract
+  'captions' => /* new SimpleData( */ $captions,
   'collapsibleCaptions' => $collapsibleCaptions,
   'img'      => "users/$user/img.png"
 ]);
@@ -41,12 +41,12 @@ copy("users/$user/img.png", "users/$user/public/img.png");
 if( is_file("users/$user/qr.png"))
 copy("users/$user/qr.png", "users/$user/public/qr.png");
 
-echo render('page.php', /* new SimpleData( */ [
+echo render('page.php', [
   'user'     => $user,
   'design'   => $design,
   'lang'     => $lang,
-  'data'     => $data,
-  'captions' => $captions,
+  'data'     => /* new SimpleData( */ $data,
+  'captions' => /* new SimpleData( */ $captions,
   'collapsibleCaptions' => $collapsibleCaptions,
   'img' => "users/$user/img.png"
 ]);
