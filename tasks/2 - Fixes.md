@@ -6,10 +6,6 @@
 - [ ] maybe add some AI generated toast that tells the user to set print paddings to 0
 - [ ] move commonly used code from designs
 
-  ```
-  How can I make sure that in the print layout, when a webpage while printed needs 2 A4 sizes pages, a left black sidebar fills all pages until the bottom.
-  ```
-
 
 Page height in print
 ----------------------------------------------------------
@@ -27,6 +23,7 @@ AI's solution for dynamic sidebar height (as long as x * A4 pages, depends on ma
 - remove the style above
 
 ```javascript
+
 // .dynamic-height {
 //   height: 100%;
 // }
