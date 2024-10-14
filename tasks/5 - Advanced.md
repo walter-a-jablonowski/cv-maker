@@ -10,5 +10,5 @@ AI
 Fixes & code style
 ----------------------------------------------------------
 
-- [ ] Some solution for a top padding per page within the bars?
+- [x] Some solution for a top padding per page within the bars?
 - [ ] fix top bar with a dropdown to switch designs
