@@ -8,8 +8,8 @@ require 'lib/render_241008.php';
 // require 'lib/SimpleData_240317.php';
 
 
-// $user = 'Walter';
-$user = 'Demo';
+$user = 'Walter';
+// $user = 'Demo';
 $design = $_GET['design'] ?? 'Black-design_Walter';
 $lang   = $_GET['lang']   ?? 'en';
 
@@ -32,14 +32,17 @@ $html = render('page.php', [
   'data'     => /* new SimpleData( */ $data,  // use extract
   'captions' => /* new SimpleData( */ $captions,
   'collapsibleCaptions' => $collapsibleCaptions,
-  'img'      => "users/$user/img.png"
+  'res'      => ''
 ]);
 
 file_put_contents("users/$user/public/cv.html", $html);
 copy("users/$user/img.png", "users/$user/public/img.png");
 
+if( is_file("users/$user/logo.png"))
+  copy("users/$user/logo.png", "users/$user/public/logo.png");
+
 if( is_file("users/$user/qr.png"))
-copy("users/$user/qr.png", "users/$user/public/qr.png");
+  copy("users/$user/qr.png", "users/$user/public/qr.png");
 
 echo render('page.php', [
   'user'     => $user,
@@ -48,7 +51,7 @@ echo render('page.php', [
   'data'     => /* new SimpleData( */ $data,
   'captions' => /* new SimpleData( */ $captions,
   'collapsibleCaptions' => $collapsibleCaptions,
-  'img' => "users/$user/img.png"
+  'res'      => "users/$user/"
 ]);
 
 ?>

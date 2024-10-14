@@ -1,7 +1,7 @@
 <div class="container">
   <div class="sidebar">
     
-    <img src="<?= $args['img'] ?>" class="profile-img" style="max-width: 200px;">
+    <img src="<?= "$args[res]img.png" ?>" class="profile-img" style="max-width: 200px;">
     
     <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
       <?=    $args['data']['personal']['name']
@@ -94,7 +94,7 @@
         Scan me
       </div>
       <div>
-        <img src="users/<?= $args['user'] ?>/qr.png" style="max-width: 200px;">
+        <img src="<?= "$args[res]qr.png" ?>" style="max-width: 200px;">
       </div>
     <?php endif; ?>
   </div>
@@ -112,7 +112,7 @@
 
     <?php if( ! empty( $args['data']['personal']['logo'] )): ?>
       <div style="text-align: center;">
-        <img src="users/<?= $args['user'] ?>/<?= $args['data']['personal']['logo'] ?>"  style="max-width: 150px;">
+        <img src="<?= $args['res'] . $args['data']['personal']['logo'] ?>"  style="max-width: 150px;">
       </div>
     <?php endif; ?>
     
