@@ -35,7 +35,7 @@ $html = render('page.php', [
   'res'      => ''
 ]);
 
-file_put_contents("users/$user/public/cv.html", $html);
+file_put_contents("users/$user/public/index.html", $html);
 copy("users/$user/img.png", "users/$user/public/img.png");
 
 if( is_file("users/$user/logo.png"))
