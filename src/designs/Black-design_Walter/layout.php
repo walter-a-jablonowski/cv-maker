@@ -106,7 +106,7 @@
         <i class="bi bi-printer"></i>
       </button>
       <button id="langBtn"  class="btn btn-action lang-en" onclick="toggleLanguage()">
-        <img  src="https://flagcdn.com/w20/us.png">
+        <img  src="https://flagcdn.com/w20/<?= ( $args['lang'] === 'de' ? 'de' : 'us' ) ?>.png">
       </button>
     </div>
 

@@ -21,8 +21,8 @@ $collapsibleCaptions = [];
 foreach( scandir('captions') as $fil )
 {
   if( pathinfo($fil, PATHINFO_EXTENSION) !== 'yml')  continue;
-  $lang = pathinfo($fil, PATHINFO_FILENAME);
-  $collapsibleCaptions[$lang] = Yaml::parseFile("captions/$fil")['collapsible'];
+  $lng = pathinfo($fil, PATHINFO_FILENAME);
+  $collapsibleCaptions[$lng] = Yaml::parseFile("captions/$fil")['collapsible'];
 }
 
 $html = render('page.php', /* new SimpleData( */ [
