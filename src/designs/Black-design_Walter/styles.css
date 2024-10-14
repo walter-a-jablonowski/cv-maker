@@ -276,6 +276,10 @@ h1, h2 {
 
   /* Page */
 
+  .sidebar {
+    min-height: calc(59.4cm - 2rem);  /* current solution: page 2 * A4 high - padding */
+  }
+
   body {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
