@@ -8,8 +8,8 @@ require 'lib/render_241008.php';
 // require 'lib/SimpleData_240317.php';
 
 
-// $user = 'Walter';
-$user = 'Demo';
+$user = 'Walter';
+// $user = 'Demo';
 $design = $_GET['design'] ?? 'Black-design_Walter';
 $lang   = $_GET['lang']   ?? 'en';
 

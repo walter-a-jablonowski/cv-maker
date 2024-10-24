@@ -130,7 +130,7 @@
         <?= $args['captions']['specialSkills'] ?>
       </h2>
       <!-- collapsible -->
-        <div class="collapsible" data-captions="<?= htmlspecialchars( json_encode( $args['collapsibleCaptions'])) ?>">
+      <div class="collapsible" data-captions="<?= htmlspecialchars( json_encode( $args['collapsibleCaptions'])) ?>">
         <div data-key="specialSkills" class="content collapsed">
           <?= $args['data']['specialSkills'] ?>
         </div>
