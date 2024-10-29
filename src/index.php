@@ -8,8 +8,8 @@ require 'lib/render_241008.php';
 // require 'lib/SimpleData_240317.php';
 
 
-$user = 'Walter';
-// $user = 'Demo';
+// $user = 'Walter';
+$user = 'Demo';
 $design = $_GET['design'] ?? 'Black-design_Walter';
 $lang   = $_GET['lang']   ?? 'en';
 
@@ -43,6 +43,17 @@ if( is_file("users/$user/logo.png"))
 
 if( is_file("users/$user/qr.png"))
   copy("users/$user/qr.png", "users/$user/public/qr.png");
+
+if( is_file('favicon.ico'))
+{
+  copy('android-chrome-192x192.png', "users/$user/public/android-chrome-192x192.png");
+  copy('android-chrome-512x512.png', "users/$user/public/android-chrome-512x512.png");
+  copy('apple-touch-icon.png',       "users/$user/public/apple-touch-icon.png");
+  copy('favicon.ico',                "users/$user/public/favicon.ico");
+  copy('favicon-16x16.png',          "users/$user/public/favicon-16x16.png");
+  copy('favicon-32x32.png',          "users/$user/public/favicon-32x32.png");
+  copy('site.webmanifest',           "users/$user/public/site.webmanifest");
+}
 
 echo render('page.php', [
   'user'     => $user,
