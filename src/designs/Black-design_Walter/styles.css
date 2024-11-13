@@ -287,6 +287,7 @@ h1, h2 {
   
   .container {
     display: flex !important;
+    flex-direction: row !important;  /* was needed cause content sometimes breaks below sidebar */
   }
   
   .sidebar {
