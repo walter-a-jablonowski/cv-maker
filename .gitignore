@@ -1,4 +1,5 @@
 desktop.ini
-Walter/
-Demo/public/**/*
 .vscode/launch.json
+public/
+!public/.gitkeep
+Walter/
