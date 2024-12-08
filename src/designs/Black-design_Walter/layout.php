@@ -135,7 +135,7 @@
           <?= $args['data']['specialSkills'] ?>
         </div>
         <span class="more-btn" data-caption="collapsible.readMore">Read more ...</span>
-        <!-- special elem -->
+        <!-- special elem TASK: add this in cv -->
         <span class="info">
           <i class="bi bi-info-circle"></i> code samples online <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
         </span>
