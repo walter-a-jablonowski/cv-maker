@@ -137,7 +137,7 @@
         <span class="more-btn" data-caption="collapsible.readMore">Read more ...</span>
         <!-- special elem -->
         <span class="info">
-          <i class="bi bi-info-circle"></i> see online version at <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
+          <i class="bi bi-info-circle"></i> code samples online <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
         </span>
       </div>
     </section>
