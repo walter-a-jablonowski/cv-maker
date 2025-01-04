@@ -3,3 +3,6 @@ desktop.ini
 public/
 !public/.gitkeep
 Walter/
+cv-maker.code-workspace
+cv-maker.sublime-project
+cv-maker.sublime-workspace
