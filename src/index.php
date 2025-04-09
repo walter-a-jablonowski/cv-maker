@@ -8,8 +8,8 @@ require 'lib/render_241008.php';
 // require 'lib/SimpleData_240317.php';
 
 
-// $user = 'Walter';
-$user = 'Demo';
+$user = 'Walter';
+// $user = 'Demo';
 $design = $_GET['design'] ?? 'Black-design_Walter';
 $lang   = $_GET['lang']   ?? 'en';
 
@@ -36,13 +36,24 @@ $html = render('page.php', [
 ]);
 
 file_put_contents("users/$user/public/index.html", $html);
-copy("users/$user/img.png", "users/$user/public/img.png");
 
-if( is_file("users/$user/logo.png"))
-  copy("users/$user/logo.png", "users/$user/public/logo.png");
+// copy("users/$user/img.png", "users/$user/public/img.png");
+//
+// if( is_file("users/$user/logo.png"))
+//   copy("users/$user/logo.png", "users/$user/public/logo.png");
+//
+// if( is_file("users/$user/qr.png"))
+//   copy("users/$user/qr.png", "users/$user/public/qr.png");
 
-if( is_file("users/$user/qr.png"))
-  copy("users/$user/qr.png", "users/$user/public/qr.png");
+// Copy all user images
+
+foreach( scandir("users/$user") as $file ) {
+  $fileInfo = pathinfo($file);
+  if( isset( $fileInfo['extension']) && in_array( strtolower( $fileInfo['extension']), ['png', 'jpg', 'jpeg', 'gif', 'svg', 'webp']))
+    copy("users/$user/$file", "users/$user/public/$file");
+}
+
+// Copy favicon and related files if they exist
 
 if( is_file('favicon.ico'))
 {

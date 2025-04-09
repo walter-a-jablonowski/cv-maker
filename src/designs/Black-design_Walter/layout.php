@@ -151,6 +151,12 @@
       </div>
     </section>
     
+    <?php if( ! empty( $args['data']['specialContentPage1'] )): ?>
+      <section>
+        <?= $args['data']['specialContentPage1'] ?>
+      </section>
+    <?php endif; ?>
+
     <section class="new-page">
       
       <h2 data-caption="experience">
