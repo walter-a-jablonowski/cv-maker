@@ -13,7 +13,8 @@ $user = 'Walter';
 $design = $_GET['design'] ?? 'Black-design_Walter';
 $lang   = $_GET['lang']   ?? 'en';
 
-$data     = Yaml::parseFile("users/$user/cv_$lang.yml");
+//$data   = Yaml::parseFile("users/$user/cv_$lang.yml");
+$data     = file_get_contents("users/$user/cv_$lang.yml");
 $captions = Yaml::parseFile("captions/$lang.yml");
 
 $collapsibleCaptions = [];
@@ -25,11 +26,13 @@ foreach( scandir('captions') as $fil )
   $collapsibleCaptions[$lng] = Yaml::parseFile("captions/$fil")['collapsible'];
 }
 
+$publicData = str_replace('{RES_PATH}', '', $data);
+
 $html = render('page.php', [
   'user'     => $user,
   'design'   => $design,
   'lang'     => $lang,
-  'data'     => /* new SimpleData( */ $data,  // use extract
+  'data'     => /* new SimpleData( */ Yaml::parse($publicData),  // use extract
   'captions' => /* new SimpleData( */ $captions,
   'collapsibleCaptions' => $collapsibleCaptions,
   'res'      => ''
@@ -66,11 +69,13 @@ if( is_file('favicon.ico'))
   copy('site.webmanifest',           "users/$user/public/site.webmanifest");
 }
 
+$data = str_replace('{RES_PATH}', "users/$user/", $data);
+
 echo render('page.php', [
   'user'     => $user,
   'design'   => $design,
   'lang'     => $lang,
-  'data'     => /* new SimpleData( */ $data,
+  'data'     => /* new SimpleData( */ Yaml::parse($data),
   'captions' => /* new SimpleData( */ $captions,
   'collapsibleCaptions' => $collapsibleCaptions,
   'res'      => "users/$user/"
