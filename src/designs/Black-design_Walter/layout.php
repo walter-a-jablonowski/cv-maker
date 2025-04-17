@@ -1,10 +1,10 @@
 <div class="container">
   <div class="sidebar">
     
-    <img src="<?= "$args[res]img.png" ?>" class="profile-img" style="max-width: 200px;">
+    <img src="<?= $args['res'] ?><?= $args['data']['personal']['image'] ?>" class="profile-img" style="max-width: 200px;">
     
     <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
-      <?=    $args['data']['personal']['name']
+      <?= $args['data']['personal']['name']
           // $args->get('data.personal.name')
       ?>
     </h1>
