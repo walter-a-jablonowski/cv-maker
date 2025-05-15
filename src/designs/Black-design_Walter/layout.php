@@ -20,7 +20,7 @@
         <tr>
           <td><i class="bi bi-envelope"></i></td>
           <td>
-            <a href="mailto:<?= $args['data']['personal']['replyTo'] ?? $args['data']['personal']['email'] ?>"><?= $args['data']['personal']['email'] ?></a>
+            <a href="mailto:<?= $args['data']['personal']['mail'] ?>"><?= $args['data']['personal']['mailCaption'] ?></a>
           </td>
         </tr>
         <tr>
