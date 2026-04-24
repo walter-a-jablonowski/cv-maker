@@ -226,7 +226,7 @@
     </section>
 
     <p class="footer">
-      powered by <a href="https://github.com/walter-a-jablonowski/cv-maker" target="_blank">cv-maker</a> &copy; Walter A. Jablonowski 2024
+      powered by cv-maker &copy; Walter A. Jablonowski 2024-2026
     </p>
   </div>
 

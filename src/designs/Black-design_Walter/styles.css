@@ -314,6 +314,12 @@ h1, h2 {
     color: var(--secondary-color) !important;
   }
 
+  body a.link-blue,
+  body a.link-blue:visited,
+  body a.link-blue:link {
+    color: #1a73e8 !important;
+  }
+
   .new-page {
     page-break-inside: avoid;
     page-break-before: always;
