@@ -40,8 +40,8 @@ use Symfony\Component\Yaml\Exception\ParseException;
       'de': <?php echo json_encode( Yaml::parseFile("captions/de.yml")); ?>
     }
     const data = {
-      'en': <?php echo json_encode( Yaml::parseFile("users/$args[user]/cv_en.yml")); ?>,
-      'de': <?php echo json_encode( Yaml::parseFile("users/$args[user]/cv_de.yml")); ?>
+      'en': <?php echo json_encode( Yaml::parse( str_replace('{RES_PATH}', $args['res'], file_get_contents("users/$args[user]/cv_en.yml")))); ?>,
+      'de': <?php echo json_encode( Yaml::parse( str_replace('{RES_PATH}', $args['res'], file_get_contents("users/$args[user]/cv_de.yml")))); ?>
     }
   </script>
   <script>

@@ -1,14 +1,14 @@
 <div class="container">
   <div class="sidebar">
-    
+
     <img src="<?= $args['res'] ?><?= $args['data']['personal']['image'] ?>" class="profile-img" style="max-width: 200px;">
-    
+
     <h1 style="font-size: 2.4vw;">  <!-- fix font size so that it matches container -->
       <?= $args['data']['personal']['name']
           // $args->get('data.personal.name')
       ?>
     </h1>
-    
+
     <?php if( ! empty( $args['data']['personal']['summary'] )): ?>
       <p data-key="personal.summary">
         <?= $args['data']['personal']['summary'] ?>
@@ -59,7 +59,7 @@
         </span>
       <?php endforeach; ?>
     </div>
-      
+
     <div class="new-page" style="padding-top: 20px;">
       <table class="misc-personal">
         <tr>
@@ -112,10 +112,10 @@
 
     <?php if( ! empty( $args['data']['personal']['logo'] )): ?>
       <div style="text-align: center;">
-        <img src="<?= $args['res'] . $args['data']['personal']['logo'] ?>"  style="max-width: 150px;">
+        <img src="<?= $args['res'] . $args['data']['personal']['logo'] ?>"  style="max-width: 75px;">
       </div>
     <?php endif; ?>
-    
+
     <section>
       <h2 data-caption="summary">
         <?= $args['captions']['summary'] ?>
@@ -137,11 +137,11 @@
         <span class="more-btn" data-caption="collapsible.readMore">Read more ...</span>
         <!-- special elem TASK: add this in cv -->
         <span class="info">
-          <i class="bi bi-info-circle"></i> code samples online <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
+          read online: <a href="https://is.gd/waj_cv">is.gd/waj_cv</a>
         </span>
       </div>
     </section>
-    
+
     <section>
       <h2 data-caption="goals">
         <?= $args['captions']['goals'] ?>
@@ -150,19 +150,21 @@
         <?= $args['data']['goals'] ?>
       </div>
     </section>
-    
+
     <?php if( ! empty( $args['data']['specialContentPage1'] )): ?>
       <section>
-        <?= $args['data']['specialContentPage1'] ?>
+        <div data-key="specialContentPage1">
+          <?= $args['data']['specialContentPage1'] ?>
+        </div>
       </section>
     <?php endif; ?>
 
     <section class="new-page">
-      
+
       <h2 data-caption="experience">
         <?= $args['captions']['experience'] ?>
       </h2>
-      
+
       <div class="timeline" data-list="experience">
         <?php foreach( $args['data']['experience'] as $idx => $job ): ?>
           <div class="experience-item" data-idx="<?= $idx ?>">
@@ -189,13 +191,13 @@
         <?php endforeach; ?>
       </div>
     </section>
-      
+
     <section>
-        
+
       <h2 data-caption="education">
         <?= $args['captions']['education'] ?>
       </h2>
-      
+
       <div class="timeline" data-list="education">
         <?php foreach( $args['data']['education'] as $idx => $edu ): ?>
           <div class="education-item" data-idx="<?= $idx ?>">
@@ -227,5 +229,10 @@
       powered by <a href="https://github.com/walter-a-jablonowski/cv-maker" target="_blank">cv-maker</a> &copy; Walter A. Jablonowski 2024
     </p>
   </div>
-  
+
 </div>
+
+<a class="homepage-fab" href="https://walter-a-jablonowski.github.io/" target="_blank">
+  <i class="bi bi-house-fill"></i>
+  <span class="homepage-fab-label">Visit my homepage</span>
+</a>
